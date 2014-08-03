@@ -27,5 +27,9 @@
          3 = right side
     -->
     <integer name="config_fingerprintSensorLocation">0</integer>
-    
+
+    <!-- Scramble pin -->
+    <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
+
 </resources>

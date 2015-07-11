@@ -3496,6 +3496,18 @@
                 android:value="com.cafex.settings.fragments.GlobalActionsSettings" />
         </activity>
 
+        <!-- Global Actions -->
+        <activity android:name="Settings$VolumeStepsFragmentActivity"
+                  android:label="@string/volumesteps_title"
+                  android:taskAffinity="com.android.settings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.cafex.settings.fragments.VolumeStepsFragment" />
+        </activity>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>

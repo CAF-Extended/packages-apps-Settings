@@ -247,4 +247,6 @@ public class Settings extends SettingsActivity {
     public static class CafexSettingsActivity extends SettingsActivity {}
 
     public static class GlobalActionsSettingsActivity extends SettingsActivity { /* empty */ }
+
+    public static class VolumeStepsFragmentActivity extends SettingsActivity { /* empty */ }
 }

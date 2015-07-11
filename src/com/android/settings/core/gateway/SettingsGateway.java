@@ -164,6 +164,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.cafex.settings.CafexSettings;
 import com.cafex.settings.fragments.GlobalActionsSettings;
+import com.cafex.settings.fragments.VolumeStepsFragment;
 
 public class SettingsGateway {
 
@@ -316,7 +317,8 @@ public class SettingsGateway {
             InteractAcrossProfilesDetails.class.getName(),
             MediaControlsSettings.class.getName(),
             CafexSettings.class.getName(),
-            GlobalActionsSettings.class.getName()
+            GlobalActionsSettings.class.getName(),
+            VolumeStepsFragment.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -359,5 +361,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.CafexSettingsActivity.class.getName(),
             Settings.GlobalActionsSettingsActivity.class.getName(),
+            Settings.VolumeStepsFragmentActivity.class.getName(),
     };
             }

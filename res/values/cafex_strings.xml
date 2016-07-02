@@ -274,5 +274,9 @@
     <string name="bluetooth_timeout_summary_1hour">1 hour</string>
     <string name="bluetooth_timeout_summary_2hours">2 hours</string>
     <string name="bluetooth_timeout_summary_4hours">4 hours</string>
-    <string name="bluetooth_timeout_summary_8hours">8 hours</string>    
+    <string name="bluetooth_timeout_summary_8hours">8 hours</string>   
+
+    <!-- App details: open play store link if app is user installed -->
+    <string name="app_play_store">Google Play</string>
+     
 </resources>

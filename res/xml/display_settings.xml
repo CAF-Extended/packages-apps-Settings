@@ -182,6 +182,12 @@
             android:title="@string/lift_to_wake_title"/>
                 
         <SwitchPreference
+            android:key="pocket_judge"
+            android:icon="@drawable/ic_pocket_mode"            
+            android:title="@string/proximity_wake_title"
+            android:summary="@string/proximity_wake_summary" />
+
+        <SwitchPreference
             android:key="tap_to_wake"
             android:icon="@drawable/ic_double_tap_sleep_lockscreen"
             android:title="@string/tap_to_wake"

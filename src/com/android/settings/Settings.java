@@ -243,4 +243,7 @@ public class Settings extends SettingsActivity {
      */
     public static class MediaControlsSettingsActivity extends SettingsActivity {}
 
+    // CafexSettings
+    public static class CafexSettingsActivity extends SettingsActivity {}
+
 }

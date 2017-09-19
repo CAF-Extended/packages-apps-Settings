@@ -87,6 +87,12 @@
         android:fragment="com.android.settings.gestures.PowerMenuSettings"
         settings:controller="com.android.settings.gestures.PowerMenuPreferenceController" />
 
+    <Preference
+	     android:key="power_menu"
+       android:title="@string/power_menu_title"
+       android:summary="@string/power_menu_title_summary"
+	     android:fragment="com.android.settings.system.PowerMenuSettings" />        
+
     <com.android.settings.widget.PrimarySwitchPreference
         android:key="gesture_prevent_ringing_summary"
         android:title="@string/gesture_prevent_ringing_screen_title"

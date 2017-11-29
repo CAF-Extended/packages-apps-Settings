@@ -143,7 +143,12 @@
         <SwitchPreference
             android:key="lift_to_wake"
             android:title="@string/lift_to_wake_title"/>
-
+                
+        <SwitchPreference
+            android:key="tap_to_wake"
+            android:title="@string/tap_to_wake"
+            android:summary="@string/tap_to_wake_summary"/>
+            
        <com.cafex.support.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_gesture"
         android:title="@string/double_tap_to_sleep_title"
@@ -155,12 +160,13 @@
         android:title="@string/double_tap_to_sleep_lockscreen_title"
         android:summary="@string/double_tap_to_sleep_lockscreen_summary"
         android:defaultValue="true" />
-                
-        <SwitchPreference
-            android:key="tap_to_wake"
-            android:title="@string/tap_to_wake"
-            android:summary="@string/tap_to_wake_summary"/>
 
+       <com.cafex.support.preference.SystemSettingSwitchPreference
+          android:key="show_fourg_icon"
+          android:title="@string/show_fourg_icon_title"
+          android:summary="@string/show_fourg_icon_summary"
+          android:defaultValue="true"/>
+             
         <ListPreference
             android:key="theme"
             android:title="@string/device_theme"

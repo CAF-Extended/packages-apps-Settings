@@ -267,4 +267,7 @@
 
     <!-- Max refresh rate -->
     <string name="max_refresh_rate_title">Peak refresh rate</string>
+
+    <!-- Notification log -->
+    <string name="notification_log_summary">Show notifications history log</string>
 </resources>

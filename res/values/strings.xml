@@ -12341,4 +12341,10 @@
     <string name="caf_vendor_version_title">CAF vendor version</string>
     <string name="caf_vendor_version">LA.UM.9.14.r1-16100-LAHAINA.0</string>
 
+    <!-- Hardware info -->
+    <!-- Label for device's hardware platform value [CHAR LIMIT=40] -->
+    <string name="platform_revision">Platform</string>
+    <!-- Label for device's hardware ram size [CHAR LIMIT=40] -->
+    <string name="total_ram">Total RAM</string>
+
 </resources>

@@ -37,4 +37,14 @@
     <string name="transparent_lockscreen_notification_title">Transparent notifications</string>
     <string name="transparent_lockscreen_notification_summary">Enable lockscreen notifications with semi-transparent backgrounds</string>
 
+    <!-- About phone screen, Extended version -->
+    <string name="extended_version">CAFEX version</string>
+    <string name="extended_version_default">Unknown</string>
+    <string name="keywords_extended_version">aex version, extended version</string>
+
+    <!-- About phone screen, build date -->
+    <string name="build_date">Build date</string>
+    <string name="build_date_default">2015-01-01-0000</string>
+    <string name="keywords_build_date">build date, build info</string>
+
 </resources>

@@ -13684,4 +13684,10 @@
     <string name="nr_sa">SA</string>
     <string name="prefer_vonr_mode_title">Enable/Disable VoNR</string>
     <string name="prefer_vonr_mode_summary">Enable or disable VoNR</string>
+
+    <!-- About phone screen,  SELinux status -->
+    <string name="selinux_status">SELinux status</string>
+    <string name="selinux_status_disabled">Disabled</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
 </resources>

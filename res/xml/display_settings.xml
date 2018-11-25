@@ -163,6 +163,13 @@
             android:title="@string/camera_gesture_title"
             android:summary="@string/camera_gesture_desc"/>
 
+        <com.cafex.support.preference.SystemSettingSwitchPreference
+            android:key="wake_when_plugged_or_unplugged"
+            android:icon="@drawable/ic_plug_wake"            
+            android:title="@string/wake_when_plugged_or_unplugged_title"
+            android:summary="@string/wake_when_plugged_or_unplugged_summary"
+            android:defaultValue="true" />
+            
         <SwitchPreference
             android:key="lift_to_wake"
             android:title="@string/lift_to_wake_title"/>

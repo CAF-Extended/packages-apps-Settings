@@ -196,7 +196,7 @@ public class AdvancedBluetoothDetailsHeaderController extends BasePreferenceCont
         drawable.setBatteryLevel(level);
         drawable.setColorFilter(new PorterDuffColorFilter(
                 com.android.settings.Utils.getColorAttrDefaultColor(context,
-                        android.R.attr.colorControlNormal),
+                        android.R.attr.colorAccent),
                 PorterDuff.Mode.SRC));
         drawable.setCharging(charging);
 

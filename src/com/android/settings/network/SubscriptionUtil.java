@@ -302,4 +302,5 @@ public class SubscriptionUtil {
                 || subscriptionManager.canManageSubscription(info);
         return hasCarrierPrivilegePermission;
     }
+
 }

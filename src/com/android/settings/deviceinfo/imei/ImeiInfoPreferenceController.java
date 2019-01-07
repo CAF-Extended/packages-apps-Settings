@@ -186,6 +186,7 @@ public class ImeiInfoPreferenceController extends BasePreferenceController {
     }
 
     private void updatePreference(Preference preference, int simSlot) {
+        preference.setIcon(R.drawable.ic_imei);
         preference.setTitle(getTitle(simSlot));
         preference.setSummary(getSummary(simSlot));
     }

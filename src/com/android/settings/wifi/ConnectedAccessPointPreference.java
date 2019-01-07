@@ -39,7 +39,7 @@ public class ConnectedAccessPointPreference extends LongPressAccessPointPreferen
     private boolean mIsCaptivePortal;
 
     public ConnectedAccessPointPreference(AccessPoint accessPoint, Context context,
-            UserBadgeCache cache, @DrawableRes int iconResId, boolean forSavedNetworks,
+            UserBadgeCache cache, int iconResId, boolean forSavedNetworks,
             Fragment fragment) {
         super(accessPoint, context, cache, forSavedNetworks, iconResId, fragment);
     }

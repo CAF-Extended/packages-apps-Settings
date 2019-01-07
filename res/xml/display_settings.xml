@@ -24,6 +24,7 @@
 
     <com.android.settingslib.RestrictedPreference
         android:key="brightness"
+        android:icon="@drawable/ic_brightness_level"
         android:title="@string/brightness"
         settings:keywords="@string/keywords_display_brightness_level"
         settings:useAdminDisabledSummary="true"
@@ -33,6 +34,7 @@
 
     <com.android.settings.display.darkmode.DarkModePreference
         android:key="dark_ui_mode"
+        android:icon="@drawable/ic_dark_ui_mode"
         android:title="@string/dark_ui_mode"
         android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
         android:widgetLayout="@null"
@@ -42,6 +44,7 @@
 
     <com.android.settings.display.NightDisplayPreference
         android:key="night_display"
+        android:icon="@drawable/ic_night_light"
         android:title="@string/night_display_title"
         android:fragment="com.android.settings.display.NightDisplaySettings"
         android:widgetLayout="@null"
@@ -56,6 +59,7 @@
 
     <Preference
         android:key="auto_brightness_entry"
+        android:icon="@drawable/ic_adaptive_brightness"
         android:title="@string/auto_brightness_title"
         android:summary="@string/summary_placeholder"
         android:fragment="com.android.settings.display.AutoBrightnessSettings"
@@ -63,6 +67,7 @@
 
     <com.android.settingslib.RestrictedPreference
         android:key="wallpaper"
+        android:icon="@drawable/ic_wallpapers"
         android:title="@string/wallpaper_settings_title"
         settings:keywords="@string/keywords_display_wallpaper"
         settings:useAdminDisabledSummary="true"
@@ -72,6 +77,7 @@
     <!-- Cross-listed item, if you change this, also change it in power_usage_summary.xml -->
     <com.android.settings.display.TimeoutListPreference
         android:key="screen_timeout"
+        android:icon="@drawable/ic_sleep_timeout"
         android:title="@string/screen_timeout"
         android:summary="@string/summary_placeholder"
         android:entries="@array/screen_timeout_entries"
@@ -87,6 +93,7 @@
 
     <SwitchPreference
         android:key="auto_rotate"
+        android:icon="@drawable/ic_auto_rotation"
         android:title="@string/accelerometer_title"
         settings:keywords="@string/keywords_auto_rotate"
         settings:controller="com.android.settings.display.AutoRotatePreferenceController" />
@@ -94,6 +101,7 @@
     <Preference
         android:key="color_mode"
         android:title="@string/color_mode_title"
+        android:icon="@drawable/ic_color_mode"
         android:fragment="com.android.settings.display.ColorModePreferenceFragment"
         settings:controller="com.android.settings.display.ColorModePreferenceController"
         settings:keywords="@string/keywords_color_mode" />
@@ -112,12 +120,14 @@
 
     <Preference
         android:key="font_size"
+        android:icon="@drawable/ic_font_dimen"
         android:title="@string/title_font_size"
         android:fragment="com.android.settings.display.ToggleFontSizePreferenceFragment"
         settings:controller="com.android.settings.display.FontSizePreferenceController" />
 
     <com.android.settings.display.ScreenZoomPreference
         android:key="display_settings_screen_zoom"
+        android:icon="@drawable/ic_display_dimen"
         android:title="@string/screen_zoom_title"
         android:fragment="com.android.settings.display.ScreenZoomSettings"/>
 
@@ -128,11 +138,13 @@
 
     <Preference
         android:key="screensaver"
+        android:icon="@drawable/ic_screensaver"
         android:title="@string/screensaver_settings_title"
         android:fragment="com.android.settings.dream.DreamSettings" />
 
     <Preference
         android:key="lockscreen_from_display_settings"
+        android:icon="@drawable/ic_lock_24dp"
         android:title="@string/lockscreen_settings_title"
         android:fragment="com.android.settings.security.LockscreenDashboardFragment"
         settings:keywords="@string/keywords_ambient_display_screen"
@@ -149,6 +161,7 @@
 
     <SwitchPreference
         android:key="tap_to_wake"
+        android:icon="@drawable/ic_double_tap_sleep_lockscreen"
         android:title="@string/tap_to_wake"
         android:summary="@string/tap_to_wake_summary" />
         

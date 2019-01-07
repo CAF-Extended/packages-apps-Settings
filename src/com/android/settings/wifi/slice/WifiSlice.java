@@ -204,10 +204,10 @@ public class WifiSlice implements CustomSliceable {
                 tint = Utils.getColorAccentDefaultColor(mContext);
             } else { // connecting
                 tint = Utils.getDisabled(mContext, Utils.getColorAttrDefaultColor(mContext,
-                        android.R.attr.colorControlNormal));
+                        android.R.attr.colorAccent));
             }
         } else {
-            tint = Utils.getColorAttrDefaultColor(mContext, android.R.attr.colorControlNormal);
+            tint = Utils.getColorAttrDefaultColor(mContext, android.R.attr.colorAccent);
         }
 
         final Drawable drawable = mContext.getDrawable(

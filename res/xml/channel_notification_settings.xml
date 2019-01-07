@@ -42,19 +42,19 @@
         android:key="importance"
         android:order="4"
         android:title="@string/notification_importance_title"
-        settings:allowDividerBelow="true"/>
+        settings:allowDividerBelow="false"/>
 
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="min_importance"
         android:order="5"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         android:title="@string/notification_importance_min_title"
         android:summary="@string/notification_channel_summary_min"/>
 
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="high_importance"
         android:order="6"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         android:title="@string/notification_importance_high_title"
         android:summary="@string/notification_channel_summary_high"/>
 
@@ -64,7 +64,7 @@
         android:icon="@drawable/ic_promote_conversation"
         android:title="@string/promote_conversation_title"
         android:summary="@string/promote_conversation_summary"
-        settings:allowDividerAbove="true"/>
+        settings:allowDividerAbove="false"/>
 
     <PreferenceCategory
         android:key="channel_advanced"
@@ -119,7 +119,7 @@
             android:key="app_link"
             android:order="18"
             android:title="@string/app_settings_link"
-            settings:allowDividerAbove="true"/>
+            settings:allowDividerAbove="false"/>
     </PreferenceCategory>
 
     <com.android.settings.notification.app.NotificationFooterPreference

@@ -49,6 +49,7 @@
 
     <Preference
         android:key="install_credentials"
+        android:icon="@drawable/ic_install_certs"
         android:title="@string/wifi_install_credentials">
         <intent
             android:action="android.credentials.INSTALL"
@@ -61,12 +62,14 @@
 
     <Preference
         android:key="network_scorer_picker"
+        android:icon="@drawable/ic_net_score"
         android:title="@string/network_scorer_picker_title"
         android:fragment="com.android.settings.network.NetworkScorerPicker"
         settings:controller="com.android.settings.network.NetworkScorerPickerPreferenceController" />
 
     <Preference
         android:key="wifi_direct"
+        android:icon="@drawable/ic_wifi_direct"
         android:title="@string/wifi_menu_p2p"
         android:fragment="com.android.settings.wifi.p2p.WifiP2pSettings" />
 

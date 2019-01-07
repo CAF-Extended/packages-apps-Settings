@@ -230,7 +230,7 @@ public class StorageItemPreferenceController extends AbstractPreferenceControlle
 
     private static Drawable applyTint(Context context, Drawable icon) {
         TypedArray array =
-                context.obtainStyledAttributes(new int[]{android.R.attr.colorControlNormal});
+                context.obtainStyledAttributes(new int[]{android.R.attr.colorAccent});
         icon = icon.mutate();
         icon.setTint(array.getColor(0, 0));
         array.recycle();

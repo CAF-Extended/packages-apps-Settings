@@ -25,6 +25,7 @@
     <!-- available in pattern -->
     <SwitchPreference
         android:key="visiblepattern"
+        android:icon="@drawable/ic_visiblepattern"
         android:title="@string/lockpattern_settings_enable_visible_pattern_title" />
 
     <!-- available in pin -->
@@ -36,12 +37,14 @@
     <!-- available in pin/password -->
     <SwitchPreference
         android:key="lockscreen_quick_unlock_control"
+        android:icon="@drawable/ic_lockscreen_quick_unlock_control"        
         android:title="@string/unlock_quick_unlock_control_title"
         android:summary="@string/unlock_quick_unlock_control_summary" />
 
     <!-- available in pin/pattern/password -->
     <com.android.settings.display.TimeoutListPreference
         android:key="lock_after_timeout"
+        android:icon="@drawable/ic_lock_after_timeout"
         android:title="@string/lock_after_timeout"
         android:summary="@string/summary_placeholder"
         android:entries="@array/lock_after_timeout_entries"
@@ -50,6 +53,7 @@
     <!-- available in pin/pattern/password -->
     <SwitchPreference
         android:key="power_button_instantly_locks"
+        android:icon="@drawable/ic_power_instant_lock"
         android:title="@string/lockpattern_settings_enable_power_button_instantly_locks" />
 
 </PreferenceScreen>

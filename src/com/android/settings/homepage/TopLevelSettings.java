@@ -117,7 +117,7 @@ public class TopLevelSettings extends DashboardFragment implements
 
     private void updateTheme() {
         int[] attrs = new int[] {
-            android.R.attr.colorControlNormal,
+            android.R.attr.colorAccent,
             android.R.attr.colorAccent,
         };
         TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs);

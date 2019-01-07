@@ -277,7 +277,7 @@ public class NetworkRequestDialogFragment extends NetworkRequestDialogBaseFragme
                 final Drawable drawable = getContext().getDrawable(
                         Utils.getWifiIconResource(level, standard, isReady));
                 drawable.setTintList(
-                        Utils.getColorAttr(getContext(), android.R.attr.colorControlNormal));
+                        Utils.getColorAttr(getContext(), android.R.attr.colorAccent));
                 imageView.setImageDrawable(drawable);
             }
 

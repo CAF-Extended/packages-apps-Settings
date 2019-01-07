@@ -42,7 +42,7 @@
         settings:keywords="@string/keywords_display_adaptive_sleep"
         settings:controller="com.android.settings.display.AdaptiveSleepDetailPreferenceController"
         settings:useAdminDisabledSummary="true"
-        settings:allowDividerAbove="true" />
+        settings:allowDividerAbove="false" />
 
     <com.android.settingslib.widget.FooterPreference
         android:key="adaptive_sleep_footer"

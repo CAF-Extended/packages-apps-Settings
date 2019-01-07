@@ -27,12 +27,14 @@
         <com.android.settingslib.RestrictedPreference
             android:key="brightness"
             android:title="@string/brightness"
+            android:icon="@drawable/ic_brightness_level"            
             settings:keywords="@string/keywords_display_brightness_level"
             settings:useAdminDisabledSummary="true"
             settings:userRestriction="no_config_brightness"/>
 
         <com.android.settings.widget.PrimarySwitchPreference
             android:key="auto_brightness_entry"
+            android:icon="@drawable/ic_adaptive_brightness"            
             android:title="@string/auto_brightness_title"
             android:fragment="com.android.settings.display.AutoBrightnessSettings"
             settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"/>
@@ -43,6 +45,7 @@
 
         <Preference
             android:key="lockscreen_from_display_settings"
+            android:icon="@drawable/ic_screen_lock"
             android:title="@string/lockscreen_settings_title"
             android:fragment="com.android.settings.security.LockscreenDashboardFragment"
             settings:keywords="@string/keywords_ambient_display_screen"
@@ -50,6 +53,7 @@
 
         <com.android.settingslib.RestrictedPreference
             android:key="screen_timeout"
+            android:icon="@drawable/ic_sleep_timeout"
             android:title="@string/screen_timeout"
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.display.ScreenTimeoutSettings"
@@ -62,6 +66,7 @@
         <com.android.settings.display.darkmode.DarkModePreference
             android:key="dark_ui_mode"
             android:title="@string/dark_ui_mode"
+            android:icon="@drawable/ic_dark_ui_mode"            
             android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
             android:widgetLayout="@null"
             settings:widgetLayout="@null"
@@ -70,22 +75,26 @@
 
         <Preference
             android:key="font_size"
+            android:icon="@drawable/ic_font_dimen"
             android:title="@string/title_font_size"
             android:fragment="com.android.settings.display.ToggleFontSizePreferenceFragment"
             settings:controller="com.android.settings.display.FontSizePreferenceController" />
 
         <com.android.settings.display.ScreenZoomPreference
             android:key="display_settings_screen_zoom"
+            android:icon="@drawable/ic_display_dimen"
             android:title="@string/screen_zoom_title"
             android:fragment="com.android.settings.display.ScreenZoomSettings"
             settings:searchable="false"/>
 
         <com.android.settings.display.DensityPreference
             android:key="density"
+            android:icon="@drawable/ic_width"            
             android:title="@string/developer_smallest_width" />
 
      <Preference
-            android:title="@string/lockscreen_tuner_title" >
+            android:title="@string/lockscreen_tuner_title" 
+            android:icon="@drawable/ic_screen_lock" >
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
@@ -93,6 +102,7 @@
 
        <Preference
            android:key="systemui_tuner_statusbar"
+            android:icon="@drawable/ic_list"           
            android:title="@string/statusbar_items_category" >
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.android.systemui"
@@ -107,12 +117,14 @@
         <com.android.settings.widget.PrimarySwitchPreference
             android:key="night_display"
             android:title="@string/night_display_title"
+            android:icon="@drawable/ic_night_light"            
             android:fragment="com.android.settings.display.NightDisplaySettings"
             settings:controller="com.android.settings.display.NightDisplayPreferenceController"
             settings:keywords="@string/keywords_display_night_display"/>
 
         <Preference
             android:key="color_mode"
+            android:icon="@drawable/ic_color_mode"
             android:title="@string/color_mode_title"
             android:fragment="com.android.settings.display.ColorModePreferenceFragment"
             settings:controller="com.android.settings.display.ColorModePreferenceController"
@@ -124,6 +136,7 @@
 
         <Preference
             android:key="auto_rotate"
+            android:icon="@drawable/ic_auto_rotation"
             android:title="@string/accelerometer_title"
             android:fragment="com.android.settings.display.SmartAutoRotatePreferenceFragment"
             settings:keywords="@string/keywords_auto_rotate"
@@ -148,6 +161,7 @@
 
         <Preference
             android:key="screensaver"
+            android:icon="@drawable/ic_screensaver"
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>
 
@@ -169,23 +183,27 @@
                 
         <SwitchPreference
             android:key="tap_to_wake"
+            android:icon="@drawable/ic_double_tap_sleep_lockscreen"
             android:title="@string/tap_to_wake"
             android:summary="@string/tap_to_wake_summary"/>
             
        <com.cafex.support.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_gesture"
+            android:icon="@drawable/ic_double_tap_sleep_lockscreen"        
         android:title="@string/double_tap_to_sleep_title"
         android:summary="@string/double_tap_to_sleep_summary"
         android:defaultValue="true" />
 
        <com.cafex.support.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
+            android:icon="@drawable/ic_double_tap_sleep_lockscreen"        
         android:title="@string/double_tap_to_sleep_lockscreen_title"
         android:summary="@string/double_tap_to_sleep_lockscreen_summary"
         android:defaultValue="true" />
 
        <com.cafex.support.preference.SystemSettingSwitchPreference
           android:key="show_fourg_icon"
+          android:icon="@drawable/ic_4g_icon"          
           android:title="@string/show_fourg_icon_title"
           android:summary="@string/show_fourg_icon_summary"
           android:defaultValue="true"/>
@@ -195,16 +213,6 @@
           android:title="@string/use_old_mobiletype_title"
           android:summary="@string/use_old_mobiletype_summary"
           android:defaultValue="true" />
-                         
-        <ListPreference
-            android:key="theme"
-            android:title="@string/device_theme"
-            android:summary="@string/summary_placeholder"/>
-
-        <Preference
-            android:key="vr_display_pref"
-            android:title="@string/display_vr_pref_title"
-            android:fragment="com.android.settings.display.VrDisplayPreferencePicker"/>
 
     </PreferenceCategory>
 
@@ -214,12 +222,14 @@
 
         <com.cafex.support.preference.SecureSettingSwitchPreference
             android:key="qs_show_brightness"
+           android:icon="@drawable/ic_brightness_level"            
             android:title="@string/qs_brightness_slider_title"
             android:summary="@string/qs_brightness_slider_summary"
             android:defaultValue="true"/>
 
         <com.cafex.support.preference.SecureSettingSwitchPreference
             android:key="qs_show_auto_brightness_button"
+            android:icon="@drawable/ic_adaptive_brightness"              
             android:title="@string/brightness_icon_title"
             android:summary="@string/brightness_icon_summary"
             android:defaultValue="true"
@@ -227,6 +237,7 @@
 
         <com.cafex.support.preference.SecureSettingSwitchPreference
             android:key="qs_brightness_position_bottom"
+            android:icon="@drawable/ic_brightness_bottom"              
             android:title="@string/qs_brightness_position_bottom_title"
             android:summary="@string/qs_brightness_position_bottom_summary"
             android:defaultValue="false"

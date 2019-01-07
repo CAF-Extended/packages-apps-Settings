@@ -66,7 +66,7 @@
         <Preference
             android:fragment="com.android.settings.accessibility.MagnificationPreferenceFragment"
             android:key="magnification_preference_screen"
-            android:icon="@drawable/ic_accessibility_magnification"
+          android:icon="@drawable/ic_magnification"
             android:persistent="false"
             android:title="@string/accessibility_screen_magnification_title"
             settings:keywords="@string/keywords_magnification"
@@ -174,6 +174,7 @@
         <Preference
             android:fragment="com.android.settings.tts.TextToSpeechSettings"
             android:key="tts_settings_preference"
+            android:icon="@drawable/ic_vocal_output"            
             android:persistent="false"
             android:title="@string/tts_settings_title"
             settings:controller="com.android.settings.language.TtsPreferenceController"/>

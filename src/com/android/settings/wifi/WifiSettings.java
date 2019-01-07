@@ -27,6 +27,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.NetworkTemplate;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
@@ -59,6 +60,7 @@ import com.android.settings.LinkifyUtils;
 import com.android.settings.R;
 import com.android.settings.RestrictedSettingsFragment;
 import com.android.settings.SettingsActivity;
+import com.android.settings.Utils;
 import com.android.settings.core.FeatureFlags;
 import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.datausage.DataUsagePreference;
@@ -1201,3 +1203,4 @@ public class WifiSettings extends RestrictedSettingsFragment
         return HelpUtils.getHelpIntent(context, helpUrlString, context.getClass().getName());
     }
 }
+

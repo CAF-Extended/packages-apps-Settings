@@ -78,7 +78,7 @@
             android:paddingLeft="16dip"
             android:contentDescription="@string/printer_info_desc"
             android:src="@*android:drawable/ic_info"
-            android:tint="?android:attr/colorControlNormal"
+            android:tint="?android:attr/colorAccent"
             android:tintMode="src_in" />
 
     </LinearLayout>

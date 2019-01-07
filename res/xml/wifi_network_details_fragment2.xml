@@ -39,7 +39,7 @@
     <com.android.settingslib.widget.ActionButtonsPreference
         android:key="buttons"
         android:selectable="false"/>
-
+        
     <!-- General Details Preferences -->
     <Preference
         android:key="signal_strength"

@@ -89,7 +89,7 @@ public class PrintJobPreferenceController extends PrintJobPreferenceControllerBa
                         DateFormat.SHORT)));
 
         TypedArray a = mContext.obtainStyledAttributes(new int[]{
-                android.R.attr.colorControlNormal});
+                android.R.attr.colorAccent});
         int tintColor = a.getColor(0, 0);
         a.recycle();
 

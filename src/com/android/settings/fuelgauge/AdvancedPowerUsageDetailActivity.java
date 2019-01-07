@@ -65,7 +65,7 @@ public class AdvancedPowerUsageDetailActivity extends AppCompatActivity {
 
             new SubSettingLauncher(this)
                     .setDestination(AdvancedPowerUsageDetail.class.getName())
-                    .setTitleRes(R.string.battery_details_title)
+                    .setTitleRes(R.string.battery_details_title)             
                     .setArguments(args)
                     .setSourceMetricsCategory(SettingsEnums.APPLICATIONS_INSTALLED_APP_DETAILS)
                     .launch();
@@ -73,4 +73,5 @@ public class AdvancedPowerUsageDetailActivity extends AppCompatActivity {
 
         finish();
     }
+
 }

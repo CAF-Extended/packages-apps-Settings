@@ -123,6 +123,7 @@ public class PhoneNumberPreferenceController extends BasePreferenceController
             final Preference simStatusPreference = mPreferenceList.get(simSlotNumber);
             simStatusPreference.setTitle(getPreferenceTitle(simSlotNumber));
             simStatusPreference.setSummary(getPhoneNumber(simSlotNumber));
+            simStatusPreference.setIcon(R.drawable.ic_phone_nr);
         }
     }
 
@@ -258,3 +259,4 @@ public class PhoneNumberPreferenceController extends BasePreferenceController
         super.finalize();
     }
 }
+

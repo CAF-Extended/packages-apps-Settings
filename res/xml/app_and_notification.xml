@@ -36,7 +36,7 @@
         android:layout="@layout/app_entities_header"
         android:selectable="false"
         android:order="-998"
-        settings:allowDividerBelow="true"
+        settings:allowDividerBelow="false"
         settings:controller="com.android.settings.applications.RecentAppsPreferenceController"/>
 
     <!-- Empty category to draw divider -->
@@ -47,6 +47,7 @@
 
     <Preference
         android:key="conversations"
+        android:icon="@drawable/ic_conversation"
         android:title="@string/conversations_category_title"
         android:order="-550"
         settings:controller="com.android.settings.notification.ConversationListSummaryPreferenceController"
@@ -55,6 +56,7 @@
 
     <Preference
         android:key="configure_notification_settings"
+        android:icon="@drawable/ic_configure_notification_settings"
         android:title="@string/configure_notification_settings"
         android:summary="@string/notification_screen_summary"
         android:order="-440"
@@ -62,11 +64,13 @@
 
     <!-- Notifications (appears before manage_perms), default apps (appears after) -->
     <PreferenceCategory
+        android:icon="@drawable/ic_notification"
         android:key="dashboard_tile_placeholder"
         android:order="10"/>
 
     <Preference
         android:key="default_apps"
+        android:icon="@drawable/ic_default_apps"
         android:title="@string/app_default_dashboard_title"
         android:order="11"
         settings:controller="com.android.settings.applications.DefaultAppsPreferenceController">
@@ -75,6 +79,7 @@
 
     <Preference
         android:key="manage_perms"
+        android:icon="@drawable/ic_app_auth"
         android:title="@string/app_permissions"
         android:summary="@string/runtime_permissions_summary_control_app_access"
         android:order="12"
@@ -84,6 +89,7 @@
 
     <com.android.settingslib.RestrictedPreference
         android:key="app_and_notif_cell_broadcast_settings"
+        android:icon="@drawable/ic_emergency_warn"
         android:title="@string/cell_broadcast_settings"
         android:order="15"
         settings:useAdminDisabledSummary="true">
@@ -96,8 +102,36 @@
     <Preference
         android:key="special_access"
         android:fragment="com.android.settings.applications.specialaccess.SpecialAccessSettings"
+        android:icon="@drawable/ic_special_access"
         android:title="@string/special_access"
         android:order="20"
         settings:controller="com.android.settings.applications.SpecialAppAccessPreferenceController"/>
+
+<!-- PreferenceCategory
+        android:key="debug_applications_category"
+        android:title="@string/adv_app_sett"
+        android:order="21">
+        <SwitchPreference
+            android:key="immediately_destroy_activities"
+            android:icon="@drawable/ic_do_not_keep_activity"
+            android:title="@string/immediately_destroy_activities"
+            android:summary="@string/immediately_destroy_activities_summary" />
+        <ListPreference
+            android:key="app_process_limit"
+            android:icon="@drawable/ic_limit_bkg_proc"
+            android:title="@string/app_process_limit_title"
+            android:entries="@array/app_process_limit_entries"
+            android:entryValues="@array/app_process_limit_values" />
+        <Preference
+            android:key="background_check"
+            android:icon="@drawable/ic_bkg_control"
+            android:fragment="com.android.settings.applications.appops.BackgroundCheckSummary"
+            android:title="@string/background_check_pref" />
+        <SwitchPreference
+            android:key="show_first_crash_dialog"
+            android:icon="@drawable/ic_show_crash"
+            android:title="@string/show_first_crash_dialog"
+            android:summary="@string/show_first_crash_dialog_summary" />
+     </PreferenceCategory-->
 
 </PreferenceScreen>

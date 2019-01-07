@@ -23,7 +23,7 @@
         android:layout="@layout/settings_entity_header"
         android:selectable="false"
         android:order="-10000"
-        settings:allowDividerBelow="true"/>
+        settings:allowDividerBelow="false"/>
 
     <com.android.settings.datausage.DataUsageSummaryPreference
         android:key="status_header"
@@ -40,7 +40,7 @@
         android:key="signal_strength"
         android:title="@string/wifi_signal"
         android:selectable="false"
-        settings:allowDividerAbove="true"/>
+        settings:allowDividerAbove="false"/>
 
     <Preference
         android:key="frequency"
@@ -71,9 +71,10 @@
     <!-- Add device Preference -->
     <Preference
         android:key="add_device_to_network"
+        android:icon="@drawable/ic_add_device_to_network"
         android:title="@string/wifi_dpp_add_device"
         android:summary="@string/wifi_dpp_connect_network_using_qr_code"
-        settings:allowDividerAbove="true"/>
+        settings:allowDividerAbove="false"/>
 
     <!-- Network Details -->
     <PreferenceCategory
@@ -81,41 +82,49 @@
             android:title="@string/wifi_setup_detail">
         <Preference
                 android:key="ssid"
+                android:icon="@drawable/ic_ssid"
                 android:title="@string/wifi_advanced_ssid_title"
                 android:selectable="false"
                 settings:enableCopying="true"/>
         <Preference
                 android:key="mac_address"
+                android:icon="@drawable/ic_mac_address"
                 android:title="@string/wifi_advanced_randomized_mac_address_title"
                 android:selectable="false"
                 settings:enableCopying="true"/>
         <Preference
                 android:key="ip_address"
+                android:icon="@drawable/ic_ip_address"
                 android:title="@string/wifi_ip_address"
                 android:selectable="false"
                 settings:enableCopying="true"/>
         <Preference
                 android:key="gateway"
+                android:icon="@drawable/ic_gateway"
                 android:title="@string/wifi_gateway"
                 android:selectable="false"
                 settings:enableCopying="true"/>
         <Preference
                 android:key="subnet_mask"
+                android:icon="@drawable/ic_subnet_mask"
                 android:title="@string/wifi_details_subnet_mask"
                 android:selectable="false"
                 settings:enableCopying="true"/>
         <Preference
                 android:key="dns"
+                android:icon="@drawable/ic_dns"
                 android:title="@string/wifi_details_dns"
                 android:selectable="false"
                 settings:enableCopying="true"/>
         <Preference
                 android:key="tx_link_speed"
+                android:icon="@drawable/ic_tx_link_speed"
                 android:title="@string/tx_wifi_speed"
                 android:selectable="false"
                 settings:enableCopying="true"/>
         <Preference
                 android:key="rx_link_speed"
+                android:icon="@drawable/ic_rx_link_speed"
                 android:title="@string/rx_wifi_speed"
                 android:selectable="false"
                 settings:enableCopying="true"/>
@@ -128,6 +137,7 @@
             android:selectable="false">
         <Preference
                 android:key="ipv6_addresses"
+                android:icon="@drawable/ic_ipv6_addresses"
                 android:selectable="false"
                 settings:enableCopying="true"/>
     </PreferenceCategory>

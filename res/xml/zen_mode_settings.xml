@@ -26,7 +26,7 @@
         android:title="@string/zen_mode_settings_title"
         android:selectable="false"
         android:layout="@layout/zen_mode_settings_button"
-        settings:allowDividerBelow="true"
+        settings:allowDividerBelow="false"
         settings:keywords="@string/keywords_zen_mode_settings"/>
 
     <PreferenceCategory
@@ -55,7 +55,7 @@
     <Preference
         android:key="zen_mode_automation_settings"
         android:title="@string/zen_category_schedule"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         android:fragment="com.android.settings.notification.zen.ZenModeAutomationSettings"/>
 
     <PreferenceCategory

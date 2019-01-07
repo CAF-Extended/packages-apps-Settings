@@ -27,6 +27,7 @@
 
     <SwitchPreference
         android:key="gesture_swipe_down_fingerprint"
+        android:icon="@drawable/ic_swipe_down"
         android:title="@string/fingerprint_swipe_for_notifications_title"
         android:summary="@string/fingerprint_swipe_for_notifications_summary"
         app:keywords="@string/keywords_gesture"

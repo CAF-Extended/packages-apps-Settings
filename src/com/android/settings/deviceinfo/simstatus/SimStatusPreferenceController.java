@@ -85,6 +85,7 @@ public class SimStatusPreferenceController extends
             final Preference simStatusPreference = mPreferenceList.get(simSlotNumber);
             simStatusPreference.setTitle(getPreferenceTitle(simSlotNumber /* sim slot */));
             simStatusPreference.setSummary(getCarrierName(simSlotNumber /* sim slot */));
+            simStatusPreference.setIcon(R.drawable.ic_sim);
         }
     }
 

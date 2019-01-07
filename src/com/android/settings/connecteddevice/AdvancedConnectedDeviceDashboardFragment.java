@@ -18,6 +18,7 @@ package com.android.settings.connecteddevice;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 
 import com.android.settings.R;
@@ -43,6 +44,11 @@ public class AdvancedConnectedDeviceDashboardFragment extends DashboardFragment 
     private static final String TAG = "AdvancedConnectedDeviceFrag";
 
     static final String KEY_BLUETOOTH = "bluetooth_settings";
+
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+    }
 
     @Override
     public int getMetricsCategory() {
@@ -116,4 +122,5 @@ public class AdvancedConnectedDeviceDashboardFragment extends DashboardFragment 
                     return buildControllers(context, null /* lifecycle */);
                 }
             };
+
 }

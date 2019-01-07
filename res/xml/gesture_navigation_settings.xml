@@ -64,6 +64,6 @@
         android:title="@string/back_sensitivity_dialog_message_cust"
         android:selectable="false"
         settings:searchable="false"
-        settings:allowDividerAbove="true"/>
+        settings:allowDividerAbove="false"/>
 </PreferenceScreen>
 

@@ -87,5 +87,5 @@
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
-        settings:allowDividerAbove="true"/>
+        settings:allowDividerAbove="false"/>
 </PreferenceScreen>

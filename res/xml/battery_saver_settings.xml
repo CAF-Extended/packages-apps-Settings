@@ -23,11 +23,13 @@
         android:key="battery_saver_schedule"
         android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverScheduleSettings"
         android:title="@string/battery_saver_schedule_settings_title"
+        android:icon="@drawable/ic_battery_saver_schedule"
         settings:keywords="@string/keywords_battery_saver_schedule"
         settings:controller="com.android.settings.fuelgauge.batterysaver.BatterySaverSchedulePreferenceController"/>
 
     <SwitchPreference
         android:key="battery_saver_sticky"
+        android:icon="@drawable/ic_battery_saver_sticky"
         android:title="@string/battery_saver_sticky_title_new"
         android:summary="@string/summary_placeholder"
         settings:keywords="@string/keywords_battery_saver_sticky"
@@ -38,7 +40,7 @@
         android:title="@string/battery_saver"
         android:selectable="false"
         android:summary="@string/battery_saver_turn_on_summary"
-        settings:allowDividerBelow="true"
+        settings:allowDividerBelow="false"
         settings:textOn="@string/battery_saver_button_turn_on"
         settings:textOff="@string/battery_saver_button_turn_off"
         settings:controller="com.android.settings.fuelgauge.batterysaver.BatterySaverButtonPreferenceController"/>
@@ -47,7 +49,7 @@
         android:key="battery_saver_footer_preference"
         android:selectable="true"
         android:title="@*android:string/battery_saver_description"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         settings:searchable="false"/>
 
 </PreferenceScreen>

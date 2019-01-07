@@ -29,7 +29,7 @@
         android:key="notification_history"
         android:title="@string/notification_history"
         android:summary="@string/notification_history_summary"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         settings:allowDividerBelow="false"
         android:order="2">
         <intent
@@ -50,7 +50,7 @@
     <PreferenceCategory
         android:key="recent_notifications_category"
         android:title="@string/recent_notifications"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         android:order="5">
         <!-- Placeholder for a list of recent apps -->
 
@@ -75,24 +75,28 @@
         <!-- When device is locked -->
         <com.android.settings.RestrictedListPreference
             android:key="lock_screen_notifications"
+            android:icon="@drawable/ic_lockscreen_notifications"
             android:title="@string/lock_screen_notifs_title"
             android:singleLineTitle="false"
             android:summary="@string/summary_placeholder" />
 
         <SwitchPreference
             android:key="lock_screen_redact"
+            android:icon="@drawable/ic_lock_screen_redact"
             android:title="@string/lock_screen_notifs_redact"
             android:summary="@string/lock_screen_notifs_redact_summary"
             settings:controller="com.android.settings.notification.RedactNotificationPreferenceController" />
 
         <SwitchPreference
             android:key="lock_screen_work_redact"
+            android:icon="@drawable/ic_lock_screen_work_redact"
             android:title="@string/lock_screen_notifs_redact_work"
             android:summary="@string/lock_screen_notifs_redact_work_summary"
             settings:controller="com.android.settings.notification.RedactNotificationPreferenceController" />
 
         <SwitchPreference
             android:key="notification_lockscreen_bypass"
+            android:icon="@drawable/ic_notification_lockscreen_bypass"
             android:title="@string/lockscreen_bypass_title"
             android:summary="@string/lockscreen_bypass_summary"
             settings:searchable="false"
@@ -122,11 +126,13 @@
 
         <SwitchPreference
             android:key="show_snooze_options"
+            android:icon="@drawable/ic_show_snooze_options"
             android:title="@string/snooze_options_title"
             settings:controller="com.android.settings.notification.SnoozeNotificationPreferenceController" />
 
         <SwitchPreference
             android:key="asst_capabilities_actions_replies"
+            android:icon="@drawable/ic_asst_capabilities_actions_replies"
             android:title="@string/asst_capabilities_actions_replies_title"
             android:summary="@string/asst_capabilities_actions_replies_summary"
             settings:controller="com.android.settings.notification.AssistantCapabilityPreferenceController" />
@@ -134,18 +140,21 @@
         <!-- Notification badging -->
         <SwitchPreference
             android:key="notification_badging"
+            android:icon="@drawable/ic_notification_badging"
             android:title="@string/notification_badging_title"
             settings:controller="com.android.settings.notification.BadgingNotificationPreferenceController"/>
 
         <!-- Pulse notification light -->
         <SwitchPreference
             android:key="notification_pulse"
+            android:icon="@drawable/ic_notification_pulse"
             android:title="@string/notification_pulse_title"
             settings:controller="com.android.settings.notification.PulseNotificationPreferenceController"/>
 
         <!-- Default notification ringtone -->
         <com.android.settings.DefaultRingtonePreference
             android:key="notification_default_ringtone"
+            android:icon="@drawable/ic_notification_default_ringtone"
             android:title="@string/notification_ringtone_title"
             android:dialogTitle="@string/notification_ringtone_title"
             android:summary="@string/summary_placeholder"
@@ -154,12 +163,14 @@
 
         <Preference
             android:key="gesture_swipe_down_fingerprint_notifications"
+            android:icon="@drawable/ic_gesture_swipe_down_fingerprint_notifications"
             android:title="@string/fingerprint_swipe_for_notifications_title"
             android:fragment="com.android.settings.gestures.SwipeToNotificationSettings"
             settings:controller="com.android.settings.gestures.SwipeToNotificationPreferenceController"/>
 
         <com.android.settingslib.RestrictedPreference
             android:key="zen_mode_notifications"
+            android:icon="@drawable/ic_zen_mode_notifications"
             android:title="@string/zen_mode_settings_title"
             settings:useAdminDisabledSummary="true"
             android:fragment="com.android.settings.notification.zen.ZenModeSettings"

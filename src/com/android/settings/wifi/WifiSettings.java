@@ -28,6 +28,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
@@ -61,6 +62,7 @@ import com.android.settings.LinkifyUtils;
 import com.android.settings.R;
 import com.android.settings.RestrictedSettingsFragment;
 import com.android.settings.SettingsActivity;
+import com.android.settings.Utils;
 import com.android.settings.core.FeatureFlags;
 import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.datausage.DataUsagePreference;
@@ -830,6 +832,8 @@ public class WifiSettings extends RestrictedSettingsFragment
     @NonNull
     private LongPressAccessPointPreference createLongPressAccessPointPreference(
             AccessPoint accessPoint) {
+        Drawable draw = getContext().getDrawable(R.drawable.ic_wifi_signal_0);
+        draw.setTintList(Utils.getColorAttr(getContext(), android.R.attr.colorAccent));
         return new LongPressAccessPointPreference(accessPoint, getPrefContext(), mUserBadgeCache,
                 false /* forSavedNetworks */, R.drawable.ic_wifi_signal_0, this);
     }
@@ -838,6 +842,8 @@ public class WifiSettings extends RestrictedSettingsFragment
     @VisibleForTesting
     ConnectedAccessPointPreference createConnectedAccessPointPreference(
             AccessPoint accessPoint, Context context) {
+        Drawable draw = getContext().getDrawable(R.drawable.ic_wifi_signal_0);
+        draw.setTintList(Utils.getColorAttr(getContext(), android.R.attr.colorAccent));
         return new ConnectedAccessPointPreference(accessPoint, context, mUserBadgeCache,
                 R.drawable.ic_wifi_signal_0, false /* forSavedNetworks */, this);
     }

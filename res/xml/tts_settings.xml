@@ -21,11 +21,13 @@
 
    <com.android.settings.widget.GearPreference
        android:key="tts_engine_preference"
+       android:icon="@drawable/ic_tts_engine_preference"
        android:title="@string/tts_engine_preference_title"
        android:fragment="com.android.settings.tts.TtsEnginePreferenceFragment"/>
 
    <ListPreference
        android:key="tts_default_lang"
+       android:icon="@drawable/ic_tts_default_lang"
        android:title="@string/tts_default_lang_title"
        android:summary="@string/tts_default_lang_summary"
        android:persistent="false" />
@@ -36,6 +38,7 @@
              with the max value specified in TextToSpeechSettings class. -->
         <com.android.settings.widget.SeekBarPreference
             android:key="tts_default_rate"
+            android:icon="@drawable/ic_tts_default_rate"
             android:title="@string/tts_default_rate_title"
             android:summary="@string/tts_default_rate_summary"
             android:defaultValue="50"
@@ -43,6 +46,7 @@
 
         <com.android.settings.widget.SeekBarPreference
             android:key="tts_default_pitch"
+            android:icon="@drawable/ic_tts_default_pitch"
             android:title="@string/tts_default_pitch_title"
             android:summary="@string/tts_default_pitch_summary"
             android:defaultValue="100"

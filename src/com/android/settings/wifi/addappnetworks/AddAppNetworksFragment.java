@@ -420,7 +420,7 @@ public class AddAppNetworksFragment extends InstrumentedFragment implements
                 Utils.getWifiIconResource(level)).mutate();
         final Drawable wifiIconDark = wifiIcon.getConstantState().newDrawable().mutate();
         wifiIconDark.setTintList(
-                Utils.getColorAttr(mActivity, android.R.attr.colorControlNormal));
+                Utils.getColorAttr(mActivity, android.R.attr.colorAccent));
         ((ImageView) mLayoutView.findViewById(R.id.signal_strength)).setImageDrawable(wifiIconDark);
     }
 
@@ -561,7 +561,7 @@ public class AddAppNetworksFragment extends InstrumentedFragment implements
                                 uiConfigurationItem.mLevel));
                 drawable.setTintList(
                         com.android.settingslib.Utils.getColorAttr(getContext(),
-                                android.R.attr.colorControlNormal));
+                                android.R.attr.colorAccent));
                 imageView.setImageDrawable(drawable);
             }
 

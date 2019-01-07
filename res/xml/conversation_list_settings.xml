@@ -31,7 +31,7 @@
         android:title="@string/important_conversations"
         android:visibility="gone"
         settings:allowDividerAbove="false"
-        settings:allowDividerBelow="true" >
+        settings:allowDividerBelow="false" >
         <Preference
             android:key="behavior"
             android:summary="@string/important_conversation_behavior_summary"/>
@@ -48,7 +48,7 @@
     <PreferenceCategory
         android:title="@string/other_conversations"
         android:key="other_conversations"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         settings:allowDividerBelow="false" />
 
 </PreferenceScreen>

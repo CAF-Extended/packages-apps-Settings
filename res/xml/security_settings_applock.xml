@@ -26,6 +26,7 @@
         android:defaultValue="0"
         android:entries="@array/applock_lock_after_entries"
         android:entryValues="@array/applock_lock_after_values"
+        android:icon="@drawable/ic_show_only_on_wake"        
         android:summary="%s"
         android:title="@string/applock_lock_after_title"
         android:order="-999" />
@@ -35,7 +36,7 @@
         android:order="-998"
         android:icon="@drawable/ic_info_outline_24dp"
         android:summary="@string/applock_notification_info"
-        app:allowDividerAbove="true"/>
+        />
 
     <PreferenceCategory
         android:key="locked_apps"

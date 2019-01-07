@@ -25,15 +25,15 @@
         android:layout="@layout/settings_entity_header"
         android:selectable="false"
         android:order="-10000"
-        settings:allowDividerBelow="true"/>
+        settings:allowDividerBelow="false"/>
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="instant_app_buttons"
         android:layout="@layout/instant_app_buttons"
         android:selectable="false"
         android:order="-9999"
-        settings:allowDividerAbove="true"
-        settings:allowDividerBelow="true"/>
+        settings:allowDividerAbove="false"
+        settings:allowDividerBelow="false"/>
 
     <com.android.settingslib.widget.ActionButtonsPreference
         android:key="action_buttons"
@@ -41,12 +41,14 @@
 
     <Preference
         android:key="notification_settings"
+        android:icon="@drawable/ic_notification"
         android:title="@string/notifications_label"
         settings:controller="com.android.settings.applications.appinfo.AppNotificationPreferenceController"
-        settings:allowDividerAbove="true"/>
+        settings:allowDividerAbove="false"/>
 
     <com.android.settings.widget.FixedLineSummaryPreference
         android:key="permission_settings"
+        android:icon="@drawable/ic_app_auth"
         android:title="@string/permissions_label"
         android:summary="@string/summary_placeholder"
         settings:summaryLineCount="1"
@@ -55,11 +57,13 @@
     <Preference
         android:key="storage_settings"
         android:title="@string/storage_settings_for_app"
+        android:icon="@drawable/ic_sd"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.applications.appinfo.AppStoragePreferenceController" />
 
     <com.android.settings.applications.AppDomainsPreference
         android:key="instant_app_launch_supported_domain_urls"
+        android:icon="@drawable/ic_links"
         android:title="@string/app_launch_supported_domain_urls_title"
         android:selectable="true"
         settings:controller="com.android.settings.applications.appinfo.InstantAppDomainsPreferenceController" />
@@ -67,21 +71,25 @@
     <Preference
         android:key="data_settings"
         android:title="@string/data_usage_app_summary_title"
+        android:icon="@drawable/ic_wifi_data_usage"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.applications.appinfo.AppDataUsagePreferenceController" />
 
     <Preference
         android:key="time_spent_in_app"
+        android:icon="@drawable/ic_time_passed_in_apps"
         android:title="@string/time_spent_in_app_pref_title"
         settings:controller="com.android.settings.applications.appinfo.TimeSpentInAppPreferenceController" />
 
     <Preference
         android:key="battery"
+        android:icon="@drawable/ic_settings_battery"
         android:title="@string/power_usage_summary_title"
         android:summary="@string/summary_placeholder" />
 
     <Preference
         android:key="preferred_settings"
+        android:icon="@drawable/ic_default_apps"
         android:title="@string/launch_by_default"
         android:summary="@string/summary_placeholder"
         android:selectable="true"
@@ -89,6 +97,7 @@
 
     <Preference
         android:key="memory"
+        android:icon="@drawable/ic_model_and_hw"
         android:title="@string/memory_settings_title"
         android:summary="@string/summary_placeholder"
         android:enabled="false" />
@@ -96,26 +105,31 @@
     <!-- Default apps shortcuts -->
     <Preference
         android:key="default_home"
+        android:icon="@drawable/ic_def_home"
         android:title="@string/home_app"
         android:summary="@string/summary_placeholder" />
 
     <Preference
         android:key="default_browser"
+        android:icon="@drawable/ic_settings_language"
         android:title="@string/default_browser_title"
         android:summary="@string/summary_placeholder" />
 
     <Preference
         android:key="default_phone_app"
+        android:icon="@drawable/ic_device_phone"
         android:title="@string/default_phone_title"
         android:summary="@string/default_phone_title" />
 
     <Preference
         android:key="default_emergency_app"
+        android:icon="@drawable/ic_emergency_warn"
         android:title="@string/default_emergency_app"
         android:summary="@string/summary_placeholder" />
 
     <Preference
         android:key="default_sms_app"
+        android:icon="@drawable/ic_notification"
         android:title="@string/sms_application_title"
         android:summary="@string/summary_placeholder" />
 
@@ -128,17 +142,20 @@
         <Preference
             android:key="system_alert_window"
             android:title="@string/draw_overlay"
+            android:icon="@drawable/ic_draw_over"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.appinfo.DrawOverlayDetailPreferenceController" />
 
         <Preference
             android:key="write_settings_apps"
             android:title="@string/write_settings"
+            android:icon="@drawable/ic_build_nr"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.appinfo.WriteSystemSettingsPreferenceController" />
 
         <Preference
             android:key="picture_in_picture"
+            android:icon="@drawable/ic_display_dimen"
             android:title="@string/picture_in_picture_app_detail_title"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.specialaccess.pictureinpicture.PictureInPictureDetailPreferenceController" />
@@ -146,6 +163,7 @@
         <Preference
             android:key="install_other_apps"
             android:title="@string/install_other_apps"
+            android:icon="@drawable/ic_install_other_apps"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.appinfo.ExternalSourceDetailPreferenceController" />
 
@@ -165,6 +183,7 @@
 
         <Preference
             android:key="app_info_store"
+            android:icon="@drawable/ic_imei"
             android:title="@string/app_install_details_title"
             settings:controller="com.android.settings.applications.appinfo.AppInstallerInfoPreferenceController" />
 
@@ -172,16 +191,18 @@
 
     <Preference
         android:key="app_settings_link"
+        android:icon="@drawable/ic_menu_add"
         android:title="@string/app_settings_link"
         settings:controller="com.android.settings.applications.appinfo.AppSettingPreferenceController"
-        settings:allowDividerAbove="true" />
+        settings:allowDividerAbove="false" />
 
     <Preference
         android:key="app_version"
+        android:icon="@drawable/ic_info_outline_24dp"
         android:selectable="false"
         android:order="9999"
         settings:controller="com.android.settings.applications.appinfo.AppVersionPreferenceController"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         settings:enableCopying="true"/>
 
     <Preference

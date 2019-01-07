@@ -21,10 +21,12 @@
 
     <!-- Backup settings provided by the backup transport or the default settings -->
     <Preference
+        android:icon="@drawable/ic_backup_settings"
         android:key="backup_settings" />
 
     <!-- Backup settings provided by the manufacturer -->
     <Preference
+        android:icon="@drawable/ic_manufacturer_backup"
         android:key="manufacturer_backup" />
 
 </PreferenceScreen>

@@ -227,7 +227,7 @@ public class BluetoothDevicesSlice implements CustomSliceable {
     private ListBuilder.RowBuilder getBluetoothOffHeader() {
         final Drawable drawable = mContext.getDrawable(R.drawable.ic_bluetooth_disabled);
         final int tint = Utils.getDisabled(mContext, Utils.getColorAttrDefaultColor(mContext,
-                android.R.attr.colorControlNormal));
+                android.R.attr.colorAccent));
         drawable.setTint(tint);
         final IconCompat icon = Utils.createIconWithDrawable(drawable);
         final CharSequence title = mContext.getText(R.string.bluetooth_devices_card_off_title);

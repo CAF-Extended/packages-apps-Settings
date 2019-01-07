@@ -28,6 +28,7 @@
     <com.android.settings.widget.SettingsMainSwitchPreference
         android:key="auto_brightness"
         android:title="@string/adaptive_brightness_main_switch_title"
+        android:icon="@drawable/ic_enable"
         settings:keywords="@string/keywords_display_auto_brightness"
         settings:userRestriction="no_config_brightness"
         settings:controller="com.android.settings.display.AutoBrightnessDetailPreferenceController"/>

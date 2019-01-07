@@ -50,6 +50,7 @@
     <Preference
         android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverSettings"
         android:key="battery_saver_summary"
+        android:icon="@drawable/ic_battery_saver_summary"
         android:title="@string/battery_saver"
         settings:controller="com.android.settings.fuelgauge.BatterySaverController" />
 
@@ -57,6 +58,7 @@
         android:fragment="com.android.settings.fuelgauge.SmartBatterySettings"
         android:key="smart_battery_manager"
         android:title="@string/smart_battery_manager_title"
+        android:icon="@drawable/ic_smart_battery_manager"
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryManagerPreferenceController"
         settings:keywords="@string/keywords_battery_adaptive_preferences"
         settings:searchable="true" />
@@ -75,7 +77,7 @@
         android:icon="@drawable/ic_battery_styles"
         android:summary="@string/battery_style_category_summary"        
         android:title="@string/battery_style_category_title" />
-        
+       
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"
         android:title="@string/battery_footer_summary"

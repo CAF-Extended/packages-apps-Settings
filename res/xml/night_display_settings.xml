@@ -37,6 +37,7 @@
 
     <DropDownPreference
         android:key="night_display_auto_mode"
+        android:icon="@drawable/ic_set_clock"
         android:title="@string/night_display_auto_mode_title"
         android:summary="%s"
         settings:allowDividerAbove="true"
@@ -54,6 +55,7 @@
 
     <com.android.settings.widget.SeekBarPreference
         android:key="night_display_temperature"
+        android:icon="@drawable/ic_intensity"
         android:title="@string/night_display_temperature_title"
         settings:keywords="@string/keywords_display_night_display"
         settings:controller="com.android.settings.display.NightDisplayIntensityPreferenceController"

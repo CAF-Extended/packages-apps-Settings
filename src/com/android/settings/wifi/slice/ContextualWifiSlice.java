@@ -102,7 +102,7 @@ public class ContextualWifiSlice extends WifiSlice {
         if (!isWifiEnabled) {
             drawable = mContext.getDrawable(R.drawable.ic_wifi_off);
             tint = Utils.getDisabled(mContext, Utils.getColorAttrDefaultColor(mContext,
-                    android.R.attr.colorControlNormal));
+                    android.R.attr.colorAccent));
         } else {
             // get icon of medium signal strength
             drawable = mContext.getDrawable(com.android.settingslib.Utils.getWifiIconResource(2));
@@ -110,7 +110,7 @@ public class ContextualWifiSlice extends WifiSlice {
                     && wifiSliceItem.getConnectedState() == WifiEntry.CONNECTED_STATE_CONNECTED) {
                 tint = Utils.getColorAccentDefaultColor(mContext);
             } else {
-                tint = Utils.getColorAttrDefaultColor(mContext, android.R.attr.colorControlNormal);
+                tint = Utils.getColorAttrDefaultColor(mContext, android.R.attr.colorAccent);
             }
         }
         drawable.setTint(tint);

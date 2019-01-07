@@ -2800,6 +2800,7 @@
         <activity
             android:name="Settings$ConfigureNotificationSettingsActivity"
             android:label="@string/configure_notification_settings"
+            android:icon="@drawable/ic_notification"
             android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.NOTIFICATION_SETTINGS" />
@@ -3352,6 +3353,7 @@
         <!-- Show app-level advanced power usage details (app passed in as extras) -->
         <activity
             android:name=".fuelgauge.AdvancedPowerUsageDetailActivity"
+            android:icon="@drawable/ic_battery_usage"               
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:exported="true"

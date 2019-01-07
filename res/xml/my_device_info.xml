@@ -36,6 +36,7 @@
         <!-- Device name -->
         <com.android.settings.widget.ValidatedEditTextPreference
             android:key="device_name"
+            android:icon="@drawable/ic_device_phone"            
             android:order="1"
             android:title="@string/my_device_info_device_name_preference_title"
             android:summary="@string/summary_placeholder"
@@ -55,6 +56,7 @@
         <Preference
             android:key="phone_number"
             android:order="3"
+            android:icon="@drawable/ic_phone_nr"
             android:title="@string/status_number"
             android:summary="@string/summary_placeholder"
             android:selectable="false"
@@ -68,6 +70,7 @@
         <!-- Legal information -->
         <Preference
             android:key="legal_container"
+            android:icon="@drawable/ic_legal_info"
             android:order="15"
             android:title="@string/legal_information"
             android:fragment="com.android.settings.LegalSettings"/>
@@ -75,6 +78,7 @@
         <!-- Regulatory labels -->
         <Preference
             android:key="regulatory_info"
+            android:icon="@drawable/ic_legal_info"
             android:order="16"
             android:title="@string/regulatory_labels">
             <intent android:action="android.settings.SHOW_REGULATORY_INFO"/>
@@ -83,6 +87,7 @@
         <!-- Safety & regulatory manual -->
         <Preference
             android:key="safety_info"
+            android:icon="@drawable/ic_legal_info"
             android:order="17"
             android:title="@string/safety_and_regulatory_info">
             <intent android:action="android.settings.SHOW_SAFETY_AND_REGULATORY_INFO"/>
@@ -97,6 +102,7 @@
         <!-- SIM status -->
         <Preference
             android:key="sim_status"
+            android:icon="@drawable/ic_sim"
             android:order="18"
             android:title="@string/sim_status_title"
             settings:keywords="@string/keywords_sim_status"
@@ -106,6 +112,7 @@
         <!-- Model & hardware -->
         <Preference
             android:key="device_model"
+            android:icon="@drawable/ic_device_model"
             android:order="31"
             android:title="@string/model_info"
             android:summary="@string/summary_placeholder"
@@ -117,6 +124,7 @@
         <!-- IMEI -->
         <Preference
             android:key="imei_info"
+            android:icon="@drawable/ic_imei"
             android:order="32"
             android:title="@string/status_imei"
             android:summary="@string/summary_placeholder"
@@ -127,6 +135,7 @@
         <!-- Android version -->
         <Preference
             android:key="firmware_version"
+            android:icon="@drawable/ic_android"
             android:order="42"
             android:title="@string/firmware_version"
             android:summary="@string/summary_placeholder"
@@ -140,6 +149,7 @@
         <!--IP address -->
         <Preference
             android:key="wifi_ip_address"
+            android:icon="@drawable/ic_ip_info"
             android:order="44"
             android:title="@string/wifi_ip_address"
             android:summary="@string/summary_placeholder"
@@ -149,6 +159,7 @@
         <!-- Wi-Fi MAC address -->
         <Preference
             android:key="saved_accesspoints_wifi_mac_address"
+            android:icon="@drawable/ic_mac_address"
             android:order="45"
             android:title="@string/status_wifi_mac_address"
             android:summary="@string/view_saved_network"
@@ -158,6 +169,7 @@
         <!-- Factory Wi-Fi MAC address -->
         <Preference
             android:key="wifi_mac_address"
+            android:icon="@drawable/ic_mac_address"
             android:order="46"
             android:title="@string/status_device_wifi_mac_address"
             android:summary="@string/summary_placeholder"
@@ -167,6 +179,7 @@
         <!-- Bluetooth address -->
         <Preference
             android:key="bt_address"
+            android:icon="@drawable/ic_bt_address"
             android:order="47"
             android:title="@string/status_bt_address"
             android:summary="@string/summary_placeholder"
@@ -176,6 +189,7 @@
         <!-- Device up time -->
         <Preference
             android:key="up_time"
+            android:icon="@drawable/ic_set_clock"
             android:order="48"
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
@@ -206,6 +220,7 @@
         <!-- Build number -->
         <Preference
             android:key="build_number"
+            android:icon="@drawable/ic_build_nr" 
             android:order="53"
             android:title="@string/build_number"
             android:summary="@string/summary_placeholder"

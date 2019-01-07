@@ -20,20 +20,20 @@
 
     <com.android.settingslib.RestrictedPreference
             android:key="unlock_set_off"
+            android:icon="@drawable/ic_unlock_set_off"
             android:title="@string/unlock_set_unlock_off_title"
-            android:icon="@drawable/ic_lock_none"
             android:persistent="false"/>
 
     <com.android.settingslib.RestrictedPreference
             android:key="unlock_set_none"
+            android:icon="@drawable/ic_unlock_set_none"
             android:title="@string/unlock_set_unlock_none_title"
-            android:icon="@drawable/ic_lock_swipe"
             android:persistent="false"/>
 
     <com.android.settingslib.RestrictedPreference
             android:key="unlock_set_pattern"
-            android:title="@string/unlock_set_unlock_pattern_title"
             android:icon="@drawable/ic_pattern"
+            android:title="@string/unlock_set_unlock_pattern_title"
             android:persistent="false"/>
 
     <com.android.settingslib.RestrictedPreference
@@ -50,10 +50,12 @@
 
     <com.android.settingslib.RestrictedPreference
             android:key="unlock_set_managed"
+            android:icon="@drawable/ic_managed"
             android:persistent="false"/>
 
     <com.android.settingslib.RestrictedPreference
             android:key="unlock_skip_fingerprint"
+            android:icon="@drawable/ic_fingerprint_24dp"
             android:title="@string/fingerprint_unlock_skip_fingerprint"
             android:persistent="false"/>
 

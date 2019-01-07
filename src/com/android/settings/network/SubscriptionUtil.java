@@ -642,3 +642,4 @@ public class SubscriptionUtil {
         return SubscriptionManager.getDefaultDataSubscriptionId();
     }
 }
+

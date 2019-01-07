@@ -25,10 +25,11 @@
         android:selectable="false"
         android:layout="@layout/twilight_mode_location_off"
         settings:controller="com.android.settings.display.TwilightLocationPreferenceController"
-        settings:allowDividerBelow="true"/>
+        settings:allowDividerBelow="false"/>
 
     <DropDownPreference
         android:key="night_display_auto_mode"
+        android:icon="@drawable/ic_set_clock"
         android:title="@string/night_display_auto_mode_title"
         android:summary="%s"
         settings:controller="com.android.settings.display.NightDisplayAutoModePreferenceController"/>
@@ -45,6 +46,7 @@
 
     <com.android.settings.widget.SeekBarPreference
         android:key="night_display_temperature"
+        android:icon="@drawable/ic_intensity"
         android:title="@string/night_display_temperature_title"
         settings:keywords="@string/keywords_display_night_display"
         settings:controller="com.android.settings.display.NightDisplayIntensityPreferenceController"
@@ -55,7 +57,7 @@
         android:title="@string/night_display_title"
         android:selectable="false"
         android:layout="@layout/night_display_activation_button"
-        settings:allowDividerBelow="true"
+        settings:allowDividerBelow="false"
         settings:keywords="@string/keywords_display_night_display"
         settings:controller="com.android.settings.display.NightDisplayActivationPreferenceController"/>
 
@@ -63,7 +65,7 @@
         android:key="night_display_footer"
         android:title="@string/night_display_text"
         android:selectable="false"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         settings:controller="com.android.settings.display.NightDisplayFooterPreferenceController"/>
 
 </PreferenceScreen>

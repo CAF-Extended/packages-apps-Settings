@@ -357,7 +357,7 @@ public class PrintSettingsFragment extends ProfileSettingsPreferenceFragment
                                     DateFormat.SHORT, DateFormat.SHORT)));
 
                     TypedArray a = getActivity().obtainStyledAttributes(new int[]{
-                            android.R.attr.colorControlNormal});
+                            android.R.attr.colorAccent});
                     int tintColor = a.getColor(0, 0);
                     a.recycle();
 

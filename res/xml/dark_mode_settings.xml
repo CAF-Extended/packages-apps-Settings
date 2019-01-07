@@ -24,7 +24,7 @@
         android:key="dark_ui_location_off"
         android:selectable="false"
         android:layout="@layout/twilight_mode_location_off"
-        settings:allowDividerBelow="true"
+        settings:allowDividerBelow="false"
         settings:controller="com.android.settings.display.TwilightLocationPreferenceController"/>
 
     <DropDownPreference
@@ -33,7 +33,7 @@
         android:summary="%s"
         android:entries="@array/dark_ui_scheduler_preference_titles"
         android:entryValues="@array/dark_ui_scheduler_preference_titles"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         settings:controller="com.android.settings.display.darkmode.DarkModeScheduleSelectorController"
         settings:keywords="@string/keywords_dark_ui_mode"/>
 
@@ -52,7 +52,7 @@
         android:title="@string/dark_ui_title"
         android:selectable="false"
         android:layout="@layout/dark_ui_activation_button"
-        settings:allowDividerBelow="true"
+        settings:allowDividerBelow="false"
         settings:controller="com.android.settings.display.darkmode.DarkModeActivationPreferenceController"/>
 
     <com.android.settingslib.widget.FooterPreference
@@ -60,6 +60,6 @@
             android:title="@string/dark_ui_text"
             android:selectable="false"
             settings:searchable="false"
-            settings:allowDividerAbove="true"/>
+            settings:allowDividerAbove="false"/>
 
 </PreferenceScreen>

@@ -24,7 +24,7 @@
         android:layout="@layout/settings_entity_header"
         android:selectable="false"
         android:order="-10000"
-        settings:allowDividerBelow="true"/>
+        settings:allowDividerBelow="false"/>
 
     <com.android.settingslib.widget.ActionButtonsPreference
         android:key="action_buttons"

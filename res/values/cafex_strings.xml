@@ -209,5 +209,11 @@
     <string name="always_on_display_schedule_sunset">Sunset</string>
     <string name="always_on_display_schedule_sunrise">Sunrise</string>
     <string name="disabled">Disabled</string>
+
+    <!-- Smart charging -->
+    <string name="smart_charging_title">Smart Charging</string>
+    <string name="smart_charging_summary">Set maximum charging level</string>
+    <string name="smart_charging_switch_title">Use Smart charging</string>
+    <string name="smart_charging_level_title">Trigger level</string>
     
 </resources>

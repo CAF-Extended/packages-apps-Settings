@@ -246,6 +246,8 @@ public class Settings extends SettingsActivity {
 
     // CafexSettings
     public static class CafexSettingsActivity extends SettingsActivity {}
+    // LiveDisplay
+    public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 
     public static class GlobalActionsSettingsActivity extends SettingsActivity { /* empty */ }
 

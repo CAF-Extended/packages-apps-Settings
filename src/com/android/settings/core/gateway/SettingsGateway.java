@@ -167,6 +167,7 @@ import com.cafex.settings.CafexSettings;
 import com.cafex.settings.fragments.GlobalActionsSettings;
 import com.cafex.settings.fragments.VolumeStepsFragment;
 import com.cafex.settings.fragments.GamingMode;
+import com.android.settings.livedisplay.LiveDisplaySettings;
 
 public class SettingsGateway {
 
@@ -322,7 +323,8 @@ public class SettingsGateway {
             CafexSettings.class.getName(),
             GlobalActionsSettings.class.getName(),
             VolumeStepsFragment.class.getName(),
-            GamingMode.class.getName()
+            GamingMode.class.getName(),
+            LiveDisplaySettings.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {

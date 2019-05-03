@@ -109,7 +109,7 @@
             android:title="@string/silent_notifications_status_bar"
             settings:controller="com.android.settings.notification.SilentStatusBarPreferenceController"/>
 
-        <com.benzo.settings.preference.SecureSettingSwitchPreference
+        <com.cafex.settings.preference.SecureSettingSwitchPreference
             android:key="lock_screen_transparent_notifications_enabled"
             android:title="@string/transparent_lockscreen_notification_title"
             android:summary="@string/transparent_lockscreen_notification_summary"

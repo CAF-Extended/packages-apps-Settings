@@ -16,9 +16,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-     <!-- Benzo version -->
-    <string name="benzo_version">Benzo version</string>
-    <string name="benzo_version_default">Unknown</string>
+    <!-- About phone screen, Extended version -->
+    <string name="extended_version">CAFEX version</string>
+    <string name="extended_version_default">Unknown</string>
+    <string name="keywords_extended_version">cafex version, extended version</string>
+
+    <!-- About phone screen, build date -->
+    <string name="build_date">Build date</string>
+    <string name="build_date_default">2015-01-01-0000</string>
+    <string name="keywords_build_date">build date, build info</string>
 
     <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
@@ -29,16 +35,6 @@
 
     <string name="global_actions_title">Power menu</string>
     <string name="volumesteps_title">Volume Steps</string>
-    
-    <!-- About phone screen, Extended version -->
-    <string name="extended_version">CAFEX version</string>
-    <string name="extended_version_default">Unknown</string>
-    <string name="keywords_extended_version">aex version, extended version</string>
-
-    <!-- About phone screen, build date -->
-    <string name="build_date">Build date</string>
-    <string name="build_date_default">2015-01-01-0000</string>
-    <string name="keywords_build_date">build date, build info</string>
 
     <!-- Manage applications, package string displayed in app snippet -->
     <string name="packagename_text"><xliff:g id="package_name">%1$s</xliff:g></string>

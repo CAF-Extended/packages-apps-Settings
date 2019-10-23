@@ -33,7 +33,7 @@
         android:key="battery_usage_summary"
         android:summary="@string/advanced_battery_preference_summary"
         android:title="@string/advanced_battery_preference_title"
-        settings:searchable="false" />
+        settings:keywords="@string/keywords_battery_usage" />
 
     <Preference
         android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverSettings"
@@ -65,7 +65,13 @@
         android:icon="@drawable/ic_battery_styles"
         android:summary="@string/battery_style_category_summary"        
         android:title="@string/battery_style_category_title" />
-       
+      
+    <com.cafex.support.preference.SystemSettingSwitchPreference
+        android:key="descendant_idle_manager"
+        android:icon="@drawable/ic_descendant_idle_manager"
+        android:title="@string/descendant_idle_manager_title"
+        android:summary="@string/descendant_idle_manager_summary"
+        android:defaultValue="true" />
 
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"

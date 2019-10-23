@@ -257,4 +257,7 @@
     <string name="ambient_notification_light_color_title">Custom color</string>    
     <string name="aod_disabled">AOD is disabled</string>
 
+    <!-- Descendant Idle Manager -->
+    <string name="descendant_idle_manager_title">Idle Manager</string>
+    <string name="descendant_idle_manager_summary">Algorithm to ensure efficiency (recommended on)</string>
 </resources>

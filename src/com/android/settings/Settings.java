@@ -249,4 +249,7 @@ public class Settings extends SettingsActivity {
     public static class GlobalActionsSettingsActivity extends SettingsActivity { /* empty */ }
 
     public static class VolumeStepsFragmentActivity extends SettingsActivity { /* empty */ }
+
+    // Gaming mode
+    public static class GamingModeActivity extends SettingsActivity {}
 }

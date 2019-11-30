@@ -173,7 +173,13 @@
           android:title="@string/show_fourg_icon_title"
           android:summary="@string/show_fourg_icon_summary"
           android:defaultValue="true"/>
-             
+
+       <com.cafex.support.preference.SecureSettingSwitchPreference
+          android:key="use_old_mobiletype"
+          android:title="@string/use_old_mobiletype_title"
+          android:summary="@string/use_old_mobiletype_summary"
+          android:defaultValue="true" />
+                         
         <ListPreference
             android:key="theme"
             android:title="@string/device_theme"

@@ -159,4 +159,8 @@
     <string name="show_gestures_navbar_switch_title">Show pill</string>
     <string name="show_gestures_navbar_switch_summary">Show gestures navbar</string>
 
+    <!-- Themes -->
+    <string name="du_themes_title">Themes</string>
+    <string name="du_themes_summary">Life is like a box of crayons..</string>
+
 </resources>

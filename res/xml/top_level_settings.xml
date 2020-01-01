@@ -47,6 +47,22 @@
         android:fragment="com.android.settings.applications.AppAndNotificationDashboardFragment"/>
 
     <Preference
+        android:key="top_level_cafex_settings"
+        android:title="@string/cafex_settings_title"
+        android:summary="@string/cafex_dashboard_summary"
+        android:icon="@drawable/ic_homepage_cafex"
+        android:order="-95"
+        android:fragment="com.cafex.settings.CafexSettings"/>
+
+    <Preference
+        android:key="top_level_themes"
+        android:title="@string/du_themes_title"
+        android:summary="@string/du_themes_summary"
+        android:icon="@drawable/ic_homepage_du_themes"
+        android:fragment="com.android.settings.StartThemes"
+        android:order="-92"/>
+
+    <Preference
         android:key="top_level_battery"
         android:title="@string/power_usage_summary_title"
         android:summary="@string/summary_placeholder"

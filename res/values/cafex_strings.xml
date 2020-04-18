@@ -33,4 +33,8 @@
     <string name="global_actions_title">Power menu</string>
     <string name="volumesteps_title">Volume Steps</string>
 
+    <!-- Transparent lockscreen notifications -->
+    <string name="transparent_lockscreen_notification_title">Transparent notifications</string>
+    <string name="transparent_lockscreen_notification_summary">Enable lockscreen notifications with semi-transparent backgrounds</string>
+
 </resources>

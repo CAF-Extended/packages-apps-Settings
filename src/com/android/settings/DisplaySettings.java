@@ -16,10 +16,20 @@
 
 package com.android.settings;
 
+import android.content.ContentResolver;
+import android.os.Bundle;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
-
+import androidx.preference.Preference;
+import androidx.preference.ListPreference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
+import com.cafex.support.preference.SystemSettingMasterSwitchPreference;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.display.BrightnessLevelPreferenceController;
 import com.android.settings.display.CameraGesturePreferenceController;
@@ -39,9 +49,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class DisplaySettings extends DashboardFragment {
+public class DisplaySettings extends DashboardFragment implements
+        OnPreferenceChangeListener {
+        
     private static final String TAG = "DisplaySettings";
-
+    private static final String KEY_EDGE_LIGHTNING = "pulse_ambient_light";
+        
+    private SystemSettingMasterSwitchPreference mEdgeLightning;
+    
     @Override
     public int getMetricsCategory() {
         return SettingsEnums.DISPLAY;
@@ -60,8 +75,29 @@ public class DisplaySettings extends DashboardFragment {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        
+        final ContentResolver resolver = getActivity().getContentResolver();
+                
+        mEdgeLightning = (SystemSettingMasterSwitchPreference)
+                findPreference(KEY_EDGE_LIGHTNING);
+        boolean enabled = Settings.System.getIntForUser(resolver,
+                KEY_EDGE_LIGHTNING, 0, UserHandle.USER_CURRENT) == 1;
+        mEdgeLightning.setChecked(enabled);
+        mEdgeLightning.setOnPreferenceChangeListener(this);        
     }
 
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mEdgeLightning) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putIntForUser(resolver, KEY_EDGE_LIGHTNING,
+                    value ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        }
+        return false;
+    }
+                    
     @Override
     protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
         return buildPreferenceControllers(context, getSettingsLifecycle());

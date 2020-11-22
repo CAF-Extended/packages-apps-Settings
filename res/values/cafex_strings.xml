@@ -260,4 +260,7 @@
     <!-- Descendant Idle Manager -->
     <string name="descendant_idle_manager_title">Idle Manager</string>
     <string name="descendant_idle_manager_summary">Algorithm to ensure efficiency (recommended on)</string>
+
+    <!-- Min refresh rate -->
+    <string name="min_refresh_rate_title">Minimum refresh rate</string>
 </resources>

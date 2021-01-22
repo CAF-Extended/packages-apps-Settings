@@ -67,6 +67,7 @@ android_library {
         "android.hardware.dumpstate-V1.1-java",
         "faceunlock_framework",
         "VendorSupport-Libs",
+        "vendor.aosp.smartcharge-V1.0-java",
     ],
 
     libs: [

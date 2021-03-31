@@ -123,6 +123,13 @@
             android:summary="@string/pulse_on_new_tracks_soli_summary"
             settings:controller="com.android.settings.display.PulseOnNewTracksSoliPreferenceController" />
 
+       <Preference
+          android:key="always_on_display_schedule"
+          android:icon="@drawable/ic_always_on_display_schedule"
+          android:title="@string/always_on_display_schedule_title"
+          android:fragment="com.android.settings.fragments.AODSchedule" />
+
+
         <com.cafex.settings.preference.SystemSettingListPreference
             android:key="ambient_music_ticker"
             android:title="@string/ambient_music_location"

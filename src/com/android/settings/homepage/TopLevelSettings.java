@@ -126,7 +126,7 @@ public class TopLevelSettings extends DashboardFragment implements
         ta.recycle();
 
         mIconStyle = Settings.System.getInt(getContext().getContentResolver(),
-                Settings.System.THEMING_SETTINGS_DASHBOARD_ICONS, 0);
+                Settings.System.THEMING_SETTINGS_DASHBOARD_ICONS, 4);
         themePreferences(getPreferenceScreen());
     }
 

@@ -249,11 +249,7 @@
     <string name="duration_less_than_one_minute">Less than 1 Minute</string>
     <!-- Summary for Wellbeing screen time usage. [CHAR LIMIT=NONE] -->
     <string name="screen_time_summary_usage_today">%1$s Today</string>
-
-   <!-- Notification log -->
-    <string name="notification_log_summary">Show notifications history log</string>
-
-
+    
     <!-- screen, setting option name to change wifi timeout -->
     <string name="wifi_timeout">Turn off Wi-Fi automatically</string>
 

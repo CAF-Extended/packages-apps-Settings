@@ -3549,24 +3549,6 @@
             </intent-filter>
         </activity>
 
-       <activity android:name=".network.telephony.UserPLMNListActivity"
-           android:exported="true"
-           android:label="@string/uplmn_settings_title"
-           android:configChanges="orientation|screenSize|keyboardHidden">
-           <intent-filter>
-               <action android:name="android.intent.action.MAIN" />
-           </intent-filter>
-       </activity>
-
-        <activity android:name=".network.telephony.UserPLMNEditorActivity"
-            android:exported="true"
-            android:label="@string/uplmn_settings_title"
-            android:configChanges="orientation|screenSize|keyboardHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-
         <!-- This is the longest AndroidManifest.xml ever. -->
 
 
@@ -3594,6 +3576,25 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.cafex.settings.fragments.GamingMode" />
         </activity>
+
+       <activity android:name=".network.telephony.UserPLMNListActivity"
+           android:exported="true"
+           android:label="@string/uplmn_settings_title"
+           android:configChanges="orientation|screenSize|keyboardHidden">
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+           </intent-filter>
+       </activity>
+
+        <activity android:name=".network.telephony.UserPLMNEditorActivity"
+            android:exported="true"
+            android:label="@string/uplmn_settings_title"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
 
         <!-- Start of our manifest entries -->

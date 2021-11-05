@@ -24,4 +24,89 @@
         <item>@string/security_settings_fingerprint_enroll_find_sensor_message_right</item>
     </string-array>
 
+    <!-- Fonts -->
+    <string-array name="font_type_titles">
+        <item>@string/font_type_default</item>
+        <item>@string/font_type_2</item>
+        <item>@string/font_type_3</item>
+        <item>@string/font_type_4</item>
+        <item>@string/font_type_5</item>
+        <item>@string/font_type_6</item>
+        <item>@string/font_type_7</item>
+        <item>@string/font_type_8</item>
+        <item>@string/font_type_9</item>
+        <item>@string/font_type_10</item>
+        <item>@string/font_type_11</item>
+        <item>@string/font_type_12</item>
+        <item>@string/font_type_13</item>
+        <item>@string/font_type_14</item>
+    </string-array>
+
+    <string-array name="font_type_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+    </string-array>
+
+    <!-- Adaptive icon shapes -->
+    <string-array name="adapative_icon_shape_titles">
+        <item>@string/statusbar_icons_default</item>
+        <item>@string/adaptive_icon_shape_heart</item>
+        <item>@string/adaptive_icon_shape_pebble</item>
+        <item>@string/adaptive_icon_shape_roundedhexagon</item>
+        <item>@string/adaptive_icon_shape_roundedrect</item>
+        <item>@string/adaptive_icon_shape_square</item>
+        <item>@string/adaptive_icon_shape_squircle</item>
+        <item>@string/adaptive_icon_shape_taperedrect</item>
+        <item>@string/adaptive_icon_shape_teardrop</item>
+        <item>@string/adaptive_icon_shape_vessel</item>
+        <item>@string/adaptive_icon_shape_rounded</item>        
+    </string-array>
+
+    <string-array name="adapative_icon_shape_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>        
+    </string-array>
+
+    <!-- Statusbar icons -->
+    <string-array name="statusbar_icons_titles">
+        <item>@string/statusbar_icons_default</item>
+        <item>@string/statusbar_icons_filled</item>
+        <item>@string/statusbar_icons_rounded</item>
+        <item>@string/statusbar_icons_circular</item>
+        <item>@string/statusbar_icons_kai</item>
+        <item>@string/statusbar_icons_sam</item>
+        <item>@string/statusbar_icons_victor</item>
+    </string-array>
+
+    <string-array name="statusbar_icons_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    
 </resources>

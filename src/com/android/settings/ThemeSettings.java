@@ -17,6 +17,7 @@
 package com.android.settings;
 
 import static android.os.UserHandle.USER_SYSTEM;
+import static com.android.settings.utils.Util.handleOverlays;
 
 import android.app.ActivityManagerNative;
 import android.app.UiModeManager;
@@ -45,7 +46,6 @@ import android.util.Log;
 import android.view.WindowManagerGlobal;
 import android.view.IWindowManager;
 import android.widget.Toast;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,8 +56,8 @@ import android.view.View;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.settings.Utils;
-
+import com.android.internal.util.cafex.ThemesUtils;
+import com.android.internal.util.cafex.Utils;
 import com.cafex.support.colorpicker.ColorPickerPreference;
 
 import java.util.ArrayList;
@@ -69,9 +69,16 @@ public class ThemeSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String TAG = "ThemeSettings";
 
     private String MONET_ENGINE_COLOR_OVERRIDE = "monet_engine_color_override";
+    public static final String PREF_ADAPTIVE_ICON_SHAPE = "adapative_icon_shape";
+    public static final String PREF_FONT_PICKER = "font_picker";
+    public static final String PREF_STATUSBAR_ICONS = "statusbar_icons";    
 
+    private IOverlayManager mOverlayManager;
     private Context mContext;
 
+    private ListPreference mAdaptiveIconShape;
+    private ListPreference mFontPicker;
+    private ListPreference mStatusbarIcons;
     private ColorPickerPreference mMonetColor;
 
     @Override
@@ -91,8 +98,64 @@ public class ThemeSettings extends SettingsPreferenceFragment implements OnPrefe
         mMonetColor.setNewPreviewColor(intColor);
         mMonetColor.setSummary(hexColor);
         mMonetColor.setOnPreferenceChangeListener(this);
+
+        // Font picker
+        mFontPicker = (ListPreference) findPreference(PREF_FONT_PICKER);
+        int fontPickerValue = getOverlayPosition(ThemesUtils.FONTS);
+        if (fontPickerValue != -1) {
+            mFontPicker.setValue(String.valueOf(fontPickerValue + 2));
+        } else {
+            mFontPicker.setValue("1");
+        }
+        mFontPicker.setSummary(mFontPicker.getEntry());
+        mFontPicker.setOnPreferenceChangeListener(this);
+
+        // Adaptive icon shape
+        mAdaptiveIconShape = (ListPreference) findPreference(PREF_ADAPTIVE_ICON_SHAPE);
+        int iconShapeValue = getOverlayPosition(ThemesUtils.ADAPTIVE_ICON_SHAPE);
+        if (iconShapeValue != -1) {
+            mAdaptiveIconShape.setValue(String.valueOf(iconShapeValue + 2));
+        } else {
+            mAdaptiveIconShape.setValue("1");
+        }
+        mAdaptiveIconShape.setSummary(mAdaptiveIconShape.getEntry());
+        mAdaptiveIconShape.setOnPreferenceChangeListener(this);
+
+        // Statusbar icons
+        mStatusbarIcons = (ListPreference) findPreference(PREF_STATUSBAR_ICONS);
+        int sbIconsValue = getOverlayPosition(ThemesUtils.STATUSBAR_ICONS);
+        if (sbIconsValue != -1) {
+            mStatusbarIcons.setValue(String.valueOf(sbIconsValue + 2));
+        } else {
+            mStatusbarIcons.setValue("1");
+        }
+        mStatusbarIcons.setSummary(mStatusbarIcons.getEntry());
+        mStatusbarIcons.setOnPreferenceChangeListener(this);
+
     }
 
+    private int getOverlayPosition(String[] overlays) {
+        int position = -1;
+        for (int i = 0; i < overlays.length; i++) {
+            String overlay = overlays[i];
+            if (Utils.isThemeEnabled(overlay)) {
+                position = i;
+            }
+        }
+        return position;
+    }
+
+    private String getOverlayName(String[] overlays) {
+        String overlayName = null;
+        for (int i = 0; i < overlays.length; i++) {
+            String overlay = overlays[i];
+            if (Utils.isThemeEnabled(overlay)) {
+                overlayName = overlay;
+            }
+        }
+        return overlayName;
+    }
+    
     @Override
     public int getMetricsCategory() {
         return MetricsEvent.EXTENSIONS;
@@ -114,7 +177,33 @@ public class ThemeSettings extends SettingsPreferenceFragment implements OnPrefe
             Settings.Secure.putInt(resolver,
                 MONET_ENGINE_COLOR_OVERRIDE, intHex);
             return true;
-        }
+        } else if (preference == mAdaptiveIconShape) {
+                String adapativeIconShape = newValue.toString();
+                String overlayName = getOverlayName(ThemesUtils.ADAPTIVE_ICON_SHAPE);
+                int adapativeIconShapeValue = Integer.parseInt(adapativeIconShape);
+                if (overlayName != null) {
+                    handleOverlays(overlayName, false, mOverlayManager);
+                }
+                if (adapativeIconShapeValue > 1) {
+                    handleOverlays(ThemesUtils.ADAPTIVE_ICON_SHAPE[adapativeIconShapeValue - 2],
+                            true, mOverlayManager);
+                }
+                mAdaptiveIconShape.setSummary(mAdaptiveIconShape.getEntry());
+                return true;
+            } else if (preference == mStatusbarIcons) {
+                String statusbarIcons = newValue.toString();
+                String overlayName = getOverlayName(ThemesUtils.STATUSBAR_ICONS);
+                int statusbarIconsValue = Integer.parseInt(statusbarIcons);
+                if (overlayName != null) {
+                    handleOverlays(overlayName, false, mOverlayManager);
+                }
+                if (statusbarIconsValue > 1) {
+                    handleOverlays(ThemesUtils.STATUSBAR_ICONS[statusbarIconsValue - 2],
+                            true, mOverlayManager);
+                }
+                mStatusbarIcons.setSummary(mStatusbarIcons.getEntry());
+                return true;
+            }
         return false;
     }
 }

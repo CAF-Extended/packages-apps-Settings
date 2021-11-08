@@ -70,6 +70,7 @@
     <string name="monet_engine_chroma_factor_title">Chroma factor</string>
     <string name="monet_engine_linear_lightness_title">Use linear lightness</string>
 
+    <string name="fonts_icon_title">Fonts and Icon Shapes</string>
     <string name="theme_customization_icon_shape_title">Icon shape</string>
     <string name="theme_customization_font_title">Headline / Body font</string>
 

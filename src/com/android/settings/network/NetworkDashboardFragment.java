@@ -21,11 +21,18 @@ import android.app.Dialog;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
 import android.util.Log;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.preference.Preference;
+import androidx.preference.ListPreference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -38,7 +45,7 @@ import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
-
+import com.android.internal.util.cafex.CafUtils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -47,8 +54,14 @@ import java.util.List;
 public class NetworkDashboardFragment extends DashboardFragment implements
         MobilePlanPreferenceHost {
 
+    private static final String COMBINED_SIGNAL_ICONS = "flag_combined_status_bar_signal_icons";
+    private static final String COMBINED_SIGNAL_ICONS_PROP =
+            "persist.systemui." + COMBINED_SIGNAL_ICONS;
+
     private static final String TAG = "NetworkDashboardFrag";
 
+    private SwitchPreference mEnableCombinedSignalIcons;
+    
     @Override
     public int getMetricsCategory() {
         return SettingsEnums.SETTINGS_NETWORK_CATEGORY;
@@ -83,7 +96,22 @@ public class NetworkDashboardFragment extends DashboardFragment implements
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
         use(AllInOneTetherPreferenceController.class).initEnabler(getSettingsLifecycle());
-    }
+        mEnableCombinedSignalIcons = (SwitchPreference) findPreference(COMBINED_SIGNAL_ICONS);
+        mEnableCombinedSignalIcons.setChecked(
+                SystemProperties.getBoolean(COMBINED_SIGNAL_ICONS_PROP, false));
+        mEnableCombinedSignalIcons.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+              if  (preference == mEnableCombinedSignalIcons) {
+                   boolean value = (Boolean) newValue;
+                   SystemProperties.set(COMBINED_SIGNAL_ICONS_PROP, value ? "true" : "false");
+                   CafUtils.showSystemUiRestartDialog(getActivity());
+                   return true;
+                  }
+               return false;
+               }
+           });
+       }
 
     @Override
     public int getHelpResource() {

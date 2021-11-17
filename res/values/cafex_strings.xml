@@ -140,7 +140,8 @@
     <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string> 
 
     <!-- Statusbar net monitor -->
-    <string name="traffic_title">Traffic Indicators</string>
+    <string name="traffic_title">Traffic Indicators</string>  
+    <string name="traffic_summary">Show Network Traffic</string>  
     <string name="network_traffic">Network traffic</string>
     <string name="network_traffic_state_title">Network traffic display</string>
     <string name="network_traffic_location">Traffic indicator placement</string>
@@ -180,5 +181,10 @@
     <string name="status_bar_battery_percentage_default">Hidden (default)</string>
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>  
+
+
+    <!-- Combined signal icons -->
+    <string name="flag_combined_status_bar_signal_icons_title">Combined signal icons</string>
+    <string name="flag_combined_status_bar_signal_icons_summary">Enable combined signal icons in statusbar</string>    
            
 </resources>

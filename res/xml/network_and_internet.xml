@@ -124,14 +124,23 @@
         android:fragment="com.android.settings.network.Traffic"
         android:order="25"        
         android:icon="@drawable/ic_traffic"
+        android:summary="@string/traffic_summary"        
         android:title="@string/traffic_title" />        
 
+     <SwitchPreference
+        android:key="flag_combined_status_bar_signal_icons"
+        android:order="30"
+        android:icon="@drawable/ic_combined_signal"             
+        android:title="@string/flag_combined_status_bar_signal_icons_title"
+        android:summary="@string/flag_combined_status_bar_signal_icons_summary"
+        android:defaultValue="true" />
+             
     <Preference
         android:fragment="com.android.settings.network.AdaptiveConnectivitySettings"
         android:key="adaptive_connectivity"
         android:title="@string/adaptive_connectivity_title"
         android:summary="@string/summary_placeholder"
-        android:order="30"
+        android:order="35"
         settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"/>
 </PreferenceScreen>
 

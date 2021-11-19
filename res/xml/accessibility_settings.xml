@@ -94,12 +94,13 @@
             android:title="@string/accessibility_system_controls_title"
             settings:searchable="true"/>
 
-        <com.google.android.settings.accessibility.HapticsDialogPreference
+        <Preference
+            android:fragment="com.android.settings.accessibility.VibrationSettings"
+            android:key="vibration_preference_screen"
             android:icon="@drawable/ic_vibration"
             android:persistent="false"
             android:title="@string/accessibility_vibration_settings_title"
-            android:key="vibration_preference_screen"
-            settings:controller="com.google.android.settings.accessibility.VibrationPreferenceController" />
+            settings:controller="com.android.settings.accessibility.VibrationPreferenceController"/>
 
     </PreferenceCategory>
 

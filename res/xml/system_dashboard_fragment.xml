@@ -25,8 +25,7 @@
         android:title="@string/language_settings"
         android:icon="@drawable/ic_settings_language"
         android:order="-260"
-        android:fragment="com.android.settings.language.LanguageAndInputSettings"
-        settings:controller="com.android.settings.language.LanguageAndInputPreferenceController" />
+        android:fragment="com.android.settings.language.LanguageAndInputSettings"/>
 
     <Preference
         android:key="gesture_settings"
@@ -43,14 +42,6 @@
         android:order="-240"
         android:fragment="com.android.settings.datetime.DateTimeSettings"
         settings:controller="com.android.settings.datetime.DateTimePreferenceController"/>
-
-    <com.google.android.settings.aware.AwareSettingsDialogPreference
-        android:icon="@drawable/ic_aware"
-        android:title="@string/aware_settings_title"
-        android:key="aware_settings"
-        android:order="-230"
-        settings:controller="com.google.android.settings.aware.AwareSettingsPreferenceController"
-        settings:searchable="false" />
 
     <!-- System updates -->
     <Preference

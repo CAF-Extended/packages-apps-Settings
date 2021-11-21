@@ -565,5 +565,11 @@
     <bool name="config_show_connect_tone_ui">false</bool>
     <integer name="config_default_tone_after_connected">0</integer>
     <bool name="config_show_touch_sensitivity">false</bool>
-
+    <bool name="config_connectivity_helper_call_quality_default_value">true</bool>
+    <bool name="config_connectivity_helper_d2d_default_value">false</bool>
+    <bool name="config_face_enroll_use_traffic_light">false</bool>
+    <bool name="config_face_settings_attention_supported">true</bool>
+    <bool name="config_face_settings_should_manage_preview">true</bool>
+    <bool name="config_show_connectivity_helper_call_quality">false</bool>
+    <bool name="config_show_connectivity_helper_d2d">false</bool>    
 </resources>

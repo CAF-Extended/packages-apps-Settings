@@ -197,4 +197,9 @@
     <!-- Battery stats reset -->
     <string name="battery_stats_reset">Reset stats</string>
     <string name="battery_stats_message">Battery history stats are going to be reset</string>
+
+    <!-- Status bar - panel -->
+    <string name="status_bar_panel_category_title">Statusbar and Panel</string>
+    <string name="status_bar_panel_category_summary">customize statusbar and qspanel settings</string>
+
 </resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2018 AospExtended ROM Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    android:title="@string/status_bar_panel_category_title"
+     android:key="status_bar_panel_category"    
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+       <Preference
+           android:key="systemui_tuner_statusbar"
+            android:icon="@drawable/ic_list"           
+           android:title="@string/statusbar_items_category" >
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+       </Preference>
+       
+       <com.cafex.support.preference.SystemSettingSwitchPreference
+          android:key="show_fourg_icon"
+          android:icon="@drawable/ic_4g_icon"          
+          android:title="@string/show_fourg_icon_title"
+          android:summary="@string/show_fourg_icon_summary"
+          android:defaultValue="true"/>
+
+       <com.cafex.support.preference.SystemSettingSwitchPreference
+          android:key="use_old_mobiletype"
+          android:title="@string/use_old_mobiletype_title"
+          android:summary="@string/use_old_mobiletype_summary"
+          android:defaultValue="true" />
+          
+    <PreferenceCategory
+        android:key="quick_settings_brighness_category"
+        android:title="@string/qs_brightness_slider_category">
+
+        <com.cafex.support.preference.SecureSettingSwitchPreference
+            android:key="qs_show_brightness"
+            android:icon="@drawable/ic_brightness_level"            
+            android:title="@string/qs_brightness_slider_title"
+            android:summary="@string/qs_brightness_slider_summary"
+            android:defaultValue="true"/>
+
+        <com.cafex.support.preference.SecureSettingSwitchPreference
+            android:key="sysui_qqs_brightness_slider"
+            android:icon="@drawable/ic_brightness_level"            
+            android:title="@string/quick_qs_brightness_slider_title"
+            android:summary="@string/quick_qs_brightness_slider_summary"
+            android:dependency="qs_show_brightness"
+            android:defaultValue="false"/>
+            
+        <com.cafex.support.preference.SecureSettingSwitchPreference
+            android:key="qs_show_auto_brightness_button"
+            android:icon="@drawable/ic_adaptive_brightness"              
+            android:title="@string/brightness_icon_title"
+            android:summary="@string/brightness_icon_summary"
+            android:defaultValue="true"
+            android:dependency="qs_show_brightness"/>
+
+        <com.cafex.support.preference.SecureSettingSwitchPreference
+            android:key="qs_brightness_position_bottom"
+            android:icon="@drawable/ic_brightness_bottom"              
+            android:title="@string/qs_brightness_position_bottom_title"
+            android:summary="@string/qs_brightness_position_bottom_summary"
+            android:defaultValue="false"
+            android:dependency="qs_show_brightness" />
+
+    </PreferenceCategory>
+
+    
+</PreferenceScreen>

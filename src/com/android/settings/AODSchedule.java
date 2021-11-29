@@ -13,13 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.settings.fragments;
-
-import static com.android.settings.security.LockscreenDashboardFragment.MODE_DISABLED;
-import static com.android.settings.security.LockscreenDashboardFragment.MODE_NIGHT;
-import static com.android.settings.security.LockscreenDashboardFragment.MODE_TIME;
-import static com.android.settings.security.LockscreenDashboardFragment.MODE_MIXED_SUNSET;
-import static com.android.settings.security.LockscreenDashboardFragment.MODE_MIXED_SUNRISE;
+package com.android.settings;
 
 import android.app.TimePickerDialog;
 import android.content.ContentResolver;
@@ -38,6 +32,7 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.search.SearchIndexable;
+
 import java.time.format.DateTimeFormatter;
 import java.time.LocalTime;
 
@@ -58,7 +53,7 @@ public class AODSchedule extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.always_on_display_schedule);
+        addPreferencesFromResource(R.xml.aod_schedule);
         PreferenceScreen screen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
@@ -68,7 +63,7 @@ public class AODSchedule extends SettingsPreferenceFragment implements
         mTillPref.setOnPreferenceClickListener(this);
 
         int mode = Settings.Secure.getIntForUser(resolver,
-                MODE_KEY, MODE_DISABLED, UserHandle.USER_CURRENT);
+                MODE_KEY, 0, UserHandle.USER_CURRENT);
         mModePref = (SecureSettingListPreference) findPreference(MODE_KEY);
         mModePref.setValue(String.valueOf(mode));
         mModePref.setSummary(mModePref.getEntry());
@@ -121,8 +116,8 @@ public class AODSchedule extends SettingsPreferenceFragment implements
     }
 
     private void updateTimeEnablement(int mode) {
-        mSincePref.setEnabled(mode == MODE_TIME || mode == MODE_MIXED_SUNRISE);
-        mTillPref.setEnabled(mode == MODE_TIME || mode == MODE_MIXED_SUNSET);
+        mSincePref.setEnabled(mode == 2 || mode == 4);
+        mTillPref.setEnabled(mode == 2 || mode == 3);
     }
 
     private void updateTimeSummary(int mode) {
@@ -130,13 +125,13 @@ public class AODSchedule extends SettingsPreferenceFragment implements
     }
 
     private void updateTimeSummary(String[] times, int mode) {
-        if (mode == MODE_DISABLED) {
+        if (mode == 0) {
             mSincePref.setSummary("-");
             mTillPref.setSummary("-");
             return;
         }
 
-        if (mode == MODE_NIGHT) {
+        if (mode == 1) {
             mSincePref.setSummary(R.string.always_on_display_schedule_sunset);
             mTillPref.setSummary(R.string.always_on_display_schedule_sunrise);
             return;
@@ -148,10 +143,10 @@ public class AODSchedule extends SettingsPreferenceFragment implements
         LocalTime sinceDT = LocalTime.parse(times[0], formatter);
         LocalTime tillDT = LocalTime.parse(times[1], formatter);
 
-        if (mode == MODE_MIXED_SUNSET) {
+        if (mode == 3) {
             mSincePref.setSummary(R.string.always_on_display_schedule_sunset);
             mTillPref.setSummary(tillDT.format(outputFormatter));
-        } else if (mode == MODE_MIXED_SUNRISE) {
+        } else if (mode == 4) {
             mTillPref.setSummary(R.string.always_on_display_schedule_sunrise);
             mSincePref.setSummary(sinceDT.format(outputFormatter));
         } else {
@@ -177,9 +172,9 @@ public class AODSchedule extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CAFEX;
+        return MetricsProto.MetricsEvent.EXTENSIONS;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.always_on_display_schedule);
+            new BaseSearchIndexProvider(R.xml.aod_schedule);    
 }

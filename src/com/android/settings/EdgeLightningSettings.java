@@ -91,7 +91,7 @@ public class EdgeLightningSettings extends SettingsPreferenceFragment implements
         mColorPref = (ColorPickerPreference) findPreference(KEY_COLOR);
         value = Settings.System.getIntForUser(resolver,
                 KEY_COLOR, accentColor, UserHandle.USER_CURRENT);
-        mColorPref.setDefaultColor(accentColor);
+        mColorPref.setDefaultValue(accentColor);
         String colorHex = String.format("#%08x", (0xFFFFFFFF & value));
         if (value == accentColor) {
             mColorPref.setSummary(R.string.default_string);
@@ -112,7 +112,7 @@ public class EdgeLightningSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CAFEX;
+        return MetricsProto.MetricsEvent.EXTENSIONS;
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {

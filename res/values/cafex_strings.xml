@@ -229,6 +229,8 @@
     <string name="always_on_display_schedule_mixed_sunrise">Turns on from a time till sunrise</string>
 
     <!-- Pulse notifications lightning -->
+    <string name="unit_seconds">Second(s)</string>
+    <string name="default_string">Default</string>
     <string name="pulse_ambient_light_title">Ambient edge lightning</string>
     <string name="pulse_ambient_light_summary">Light ambient edges for pulsing notifications</string>
     <string name="ambient_notification_light_enabled_title">Show on AOD</string>

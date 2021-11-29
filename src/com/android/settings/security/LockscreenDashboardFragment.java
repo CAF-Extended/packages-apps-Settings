@@ -66,12 +66,6 @@ public class LockscreenDashboardFragment extends DashboardFragment
             "security_lockscreen_add_users_when_locked";
     private static final String AOD_SCHEDULE_KEY = "always_on_display_schedule";
 
-    static final int MODE_DISABLED = 0;
-    static final int MODE_NIGHT = 1;
-    static final int MODE_TIME = 2;
-    static final int MODE_MIXED_SUNSET = 3;
-    static final int MODE_MIXED_SUNRISE = 4;
-    
     private AmbientDisplayConfiguration mConfig;
     private OwnerInfoPreferenceController mOwnerInfoPreferenceController;
     Preference mAODPref;
@@ -124,19 +118,19 @@ public class LockscreenDashboardFragment extends DashboardFragment
                 Settings.Secure.DOZE_ALWAYS_ON_AUTO_MODE, 0, UserHandle.USER_CURRENT);
         switch (mode) {
             default:
-            case MODE_DISABLED:
+            case 0:
                 mAODPref.setSummary(R.string.disabled);
                 break;
-            case MODE_NIGHT:
+            case 1:
                 mAODPref.setSummary(R.string.night_display_auto_mode_twilight);
                 break;
-            case MODE_TIME:
+            case 2:
                 mAODPref.setSummary(R.string.night_display_auto_mode_custom);
                 break;
-            case MODE_MIXED_SUNSET:
+            case 3:
                 mAODPref.setSummary(R.string.always_on_display_schedule_mixed_sunset);
                 break;
-            case MODE_MIXED_SUNRISE:
+            case 4:
                 mAODPref.setSummary(R.string.always_on_display_schedule_mixed_sunrise);
                 break;
         }

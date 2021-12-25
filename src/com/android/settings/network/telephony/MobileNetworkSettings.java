@@ -239,7 +239,6 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings {
                 .addListener(videoCallingPreferenceController);
         use(ContactDiscoveryPreferenceController.class).init(getParentFragmentManager(), mSubId,
                 getLifecycle());
-        use(NrAdvancedCallingPreferenceController.class).init(mSubId);
     }
 
     @Override

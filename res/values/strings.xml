@@ -13739,9 +13739,9 @@
     <string name="selinux_status_enforcing">Enforcing</string>
     <!-- CAF Version -->
     <string name="caf_system_version_title">CAF system version</string>
-    <string name="caf_system_version">LA.QSSI.12.0.r1-04900-qssi.0</string>
+    <string name="caf_system_version">LA.QSSI.12.0.r1-05800-qssi.0</string>
     <string name="caf_vendor_version_title">CAF vendor version</string>
-    <string name="caf_vendor_version">LA.UM.9.14.r1-18300.02-LAHAINA.QSSI12.0</string>
+    <string name="caf_vendor_version">LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0</string>
 
     <!-- Hardware info -->
     <!-- Label for device's hardware platform value [CHAR LIMIT=40] -->
